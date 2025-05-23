@@ -1,0 +1,5 @@
+[book]
+authors = ["chicodias"]
+language = "en"
+src = "src"
+title = "Snaps Kadena"
