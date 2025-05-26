@@ -3,3 +3,7 @@ authors = ["Ariel Serranoni", "Francisco Miranda"]
 language = "en"
 src = "src"
 title = "Snaps Kadena"
+
+
+[build]
+build-dir = "public"
