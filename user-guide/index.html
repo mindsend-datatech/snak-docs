@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>SDK - Snaps Kadena</title>
+        <title>User Guide - Snaps Kadena</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -102,7 +102,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -137,7 +137,7 @@
                     <h1 class="menu-title">Snaps Kadena</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -166,67 +166,62 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="sdk-quickstart"><a class="header" href="#sdk-quickstart">SDK Quickstart</a></h1>
-<h2 id="nextjs--kadena-snap-integration"><a class="header" href="#nextjs--kadena-snap-integration">Next.js + Kadena Snap Integration</a></h2>
-<p>This guide walks you through setting up a Kadena Snap-compatible dApp using the official SDK tools. We'll use the <a href="https://github.com/kadena-community/create-kadena-app"><code>create-kadena-app</code></a> CLI to scaffold a Next.js project and integrate the Kadena Snap via the wallet adapter.</p>
-<hr />
-<h3 id="1-generate-a-new-project"><a class="header" href="#1-generate-a-new-project">1. Generate a New Project</a></h3>
-<p>We leverage the template creation helper tool <code>create-kadena-app</code> to quickly scaffold a Next.js project:</p>
-<pre><code class="language-bash">npx @kadena/create-kadena-app generate-project -t nextjs -n my-kadena-dapp
-cd my-kadena-dapp
-</code></pre>
-<hr />
-<h3 id="2-install-dependencies"><a class="header" href="#2-install-dependencies">2. Install Dependencies</a></h3>
-<p>Use your preferred package manager to install dependencies:</p>
-<pre><code class="language-bash">pnpm install
-# or
-npm install
-# or
-yarn install
-</code></pre>
-<hr />
-<h3 id="3-integrate-snap-wallet-adapter"><a class="header" href="#3-integrate-snap-wallet-adapter">3. Integrate Snap Wallet Adapter</a></h3>
-<p>To enable Snap wallet support, edit the file <code>pages/_app.tsx</code>:</p>
-<pre><code class="language-ts">import { snapAdapter } from '@kadena/wallet-adapter-snap';
-import { AdapterFactory } from '@kadena/wallet-adapter-base';
-
-const adapters: AdapterFactory[] = [
-  snapAdapter(), // Add any other adapters here if needed
-];
-</code></pre>
-<hr />
-<h3 id="4-run-the-development-server"><a class="header" href="#4-run-the-development-server">4. Run the Development Server</a></h3>
-<p>Start your local development server:</p>
-<pre><code class="language-bash">pnpm dev
-# or
-npm run dev
-# or
-yarn dev
-</code></pre>
-<p>Your app should now be running at <code>http://localhost:3000</code>, ready to connect to MetaMask and use the Kadena Snap.</p>
-<hr />
-<h3 id="5-optional-enable-testnet-faucet"><a class="header" href="#5-optional-enable-testnet-faucet">5. (Optional) Enable Testnet Faucet</a></h3>
-<p>To fund your account for development, visit:</p>
-<p>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Testnet Faucet</a></p>
-<p>Enter your <code>k:</code> address from MetaMask and request free testnet KDA.</p>
-<hr />
-<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+                        <h1 id="kadena-snap-user-guide"><a class="header" href="#kadena-snap-user-guide">Kadena Snap User Guide</a></h1>
+<p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
+<h2 id="what-is-the-kadena-snap"><a class="header" href="#what-is-the-kadena-snap">What is the Kadena Snap?</a></h2>
+<p>The Kadena Snap is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:</p>
 <ul>
-<li>🔗 <a href="https://github.com/kadena-community/create-kadena-app">create-kadena-app GitHub</a></li>
-<li>🔗 <a href="https://github.com/kadena-community/kadena-snap">Kadena Snap Documentation</a></li>
-<li>🔗 <a href="https://www.npmjs.com/package/@kadena/wallet-adapter-snap">Wallet Adapter Snap Package</a></li>
+<li>Manage Kadena accounts securely inside MetaMask</li>
+<li>Perform cross-chain transfers across Kadena's 20 chains</li>
+<li>Sign and send transactions using $KDA</li>
+<li>View account balances and activity</li>
+<li>Use gas stations to simplify fees</li>
+<li>Buy KDA through integrated fiat onramps</li>
+</ul>
+<p>The Snap is fully isolated, permissions-based, and built using MetaMask’s secure extensibility model.</p>
+<h2 id="who-is-this-guide-for"><a class="header" href="#who-is-this-guide-for">Who is this guide for?</a></h2>
+<p>This guide is intended for:</p>
+<ul>
+<li><strong>Users</strong> who want to manage $KDA from within MetaMask</li>
+<li><strong>Developers</strong> building dApps that integrate with the Kadena Snap</li>
+<li><strong>Testers</strong> exploring Snap capabilities on testnet</li>
+</ul>
+<p>No prior knowledge of Kadena or Snaps is required, though basic familiarity with MetaMask is helpful.</p>
+<h2 id="what-youll-need"><a class="header" href="#what-youll-need">What you'll need</a></h2>
+<p>Before getting started, make sure you have:</p>
+<ul>
+<li>✅ MetaMask installed in your browser</li>
+<li>✅ Access to a Snap-compatible dApp (or localhost test setup)</li>
+<li>✅ Some $KDA (use the faucet if testing)</li>
+<li>✅ Basic understanding of MetaMask permissions</li>
+</ul>
+<blockquote>
+<p>💡 You can install the Snap even without a dApp using the <a href="https://snaps.metamask.io">MetaMask Snap Directory</a>.</p>
+</blockquote>
+<h2 id="what-this-guide-covers"><a class="header" href="#what-this-guide-covers">What this guide covers</a></h2>
+<p>This guide includes:</p>
+<ul>
+<li>Connecting your MetaMask wallet</li>
+<li>Installing and approving the Kadena Snap</li>
+<li>Using the Snap to send transactions</li>
+<li>Switching to the testnet (optional)</li>
+<li>Funding accounts via faucet</li>
+<li>Using advanced Snap features like cross-chain transfers</li>
 </ul>
 <hr />
-<p>You're now ready to build full-stack Kadena applications with native MetaMask Snap support.</p>
+<p>You’re now ready to explore the Kadena Snap and unlock full-chain functionality from right inside MetaMask.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="user-guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="../user-guide/connect.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -234,10 +229,13 @@ yarn dev
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="user-guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="../user-guide/connect.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -250,13 +248,13 @@ yarn dev
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 

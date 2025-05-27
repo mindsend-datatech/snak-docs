@@ -167,12 +167,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="kadena-wallet-snap-by-metamask"><a class="header" href="#kadena-wallet-snap-by-metamask">Kadena Wallet Snap by MetaMask</a></h1>
-<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>MetaMask is a popular Ethereum wallet and browser extension that developers can integrate into a variety of third-party applications. MetaMask Snaps is an open-source solution to enhance MetaMask’s functionalities beyond its native capabilities.</p>
 <p>The <strong>Kadena Wallet Snap</strong>, initially developed by the <strong>Kadena Community</strong> and now maintained by <strong>Mindsend Datatech</strong>, enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending KDA, performing cross-chain transfers, and retrieving account information.</p>
 <h2 id="what-is-a-snap"><a class="header" href="#what-is-a-snap">What is a Snap?</a></h2>
-<p>MetaMask Snaps is an open-source framework allowing secure extensions to MetaMask, thus enhancing Web3 user experiences. It empowers the addition of new API methods, supports various blockchain protocols, and tweaks existing functionalities via the Snaps JSON-RPC API.</p>
+<p>MetaMask Snaps is an open-source framework allowing secure extensions to MetaMask, enhancing Web3 user experiences. It empowers the addition of new API methods, supports various blockchain protocols, and tweaks existing functionalities via the Snaps JSON-RPC API.</p>
 <p>Snaps enable users to interact with new blockchains, protocols, and decentralized applications (dApps) beyond what is natively supported by MetaMask. The goal of the MetaMask Snaps system is to create a more open, customizable, and extensible wallet experience for users while fostering innovation and collaboration within the blockchain and decentralized application ecosystem.</p>
 <blockquote>
 <p>📚 Learn more:</p>
@@ -181,106 +180,146 @@
 <li><a href="https://docs.kadena.io">Kadena Snap Tutorial</a></li>
 </ul>
 </blockquote>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="kadenas-metamask-snap"><a class="header" href="#kadenas-metamask-snap">Kadena’s MetaMask Snap</a></h1>
-<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
-<p>Kadena’s Snap is an innovative integration that brings the unique capabilities of the Kadena blockchain ecosystem to the popular MetaMask wallet. By allowing users to interact with Kadena’s features directly through MetaMask, this Snap empowers users to manage their Kadena assets and participate in various blockchain activities with ease and efficiency, marking a significant step towards a more interconnected and user-friendly blockchain landscape.</p>
-<h2 id="what-is-a-snap-1"><a class="header" href="#what-is-a-snap-1">What is a Snap?</a></h2>
-<p>Kadena’s Snap leverages MetaMask’s security model to enable the ability to transfer and manage $KDA across Kadena’s 20 chains and sign transactions using your MetaMask wallet. The Snap is installed within the user’s MetaMask wallet and accessed via <a href="https://wallet.kadena.io">Kadena’s separate Snap interface</a>.</p>
-<p>When signing a transaction, a MetaMask popup is triggered, requiring user confirmation within the wallet. Cross-chain transfers (across Kadena’s 20 chains) are supported and can make use of Kadena’s gas stations if needed.</p>
-<p>Currently, Kadena’s Snap does not support NFTs or other Kadena tokens, but support may be added in future versions.</p>
-<p>To learn more about Snaps, visit the <a href="https://docs.metamask.io/guide/snaps.html">Metamask Snap Guide</a>.</p>
-<h2 id="what-are-some-of-the-kadena-snap-features"><a class="header" href="#what-are-some-of-the-kadena-snap-features">What are some of the Kadena Snap features?</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started-with-kadena-snap"><a class="header" href="#getting-started-with-kadena-snap">Getting Started with Kadena Snap</a></h1>
+<p>The Kadena Snap is a MetaMask extension that brings Kadena-native capabilities—like account creation, transaction signing, and cross-chain transfers—directly into your MetaMask wallet.</p>
+<p>This guide walks you through installing the Snap and using it via dApps that support it.</p>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p>Before you can use the Kadena Snap, you must have MetaMask installed and configured in your browser.</p>
+<ol>
+<li>Visit the official <a href="https://snaps.metamask.io">MetaMask Snap Directory</a> and locate <strong>Kadena Snap</strong>.</li>
+<li>Click <strong>Install</strong> to grant permissions and enable the Snap.</li>
+<li>The Snap will now be available inside your MetaMask under the “Snaps” section.</li>
+</ol>
+<blockquote>
+<p>💡 When installed, the Snap runs isolated from other extensions, using MetaMask’s permissioned execution model for enhanced security.</p>
+</blockquote>
+<h2 id="using-the-snap"><a class="header" href="#using-the-snap">Using the Snap</a></h2>
+<p>Once installed, the Kadena Snap can be accessed via supported decentralized applications (dApps). You don’t interact with it directly through MetaMask—it activates automatically when the connected site uses Snap methods.</p>
+<blockquote>
+<p>🚧 A dedicated web interface for interacting with the Snap is under development and will be available at a future domain.</p>
+</blockquote>
+<p>Here’s what you can do with the Snap-enabled dApp:</p>
 <ul>
 <li>
-<p><strong>Create Kadena Accounts</strong>:<br />
-Users can initiate account creation directly from a dApp by selecting [+ add account] and store it in the Snap.</p>
+<p><strong>Create a Kadena Account</strong>:<br />
+Click “+ Add Account” to generate a new Kadena account managed by the Snap.</p>
 </li>
 <li>
 <p><strong>Send and Receive $KDA</strong>:<br />
-The Snap enables users to perform regular transactions, allowing for both sending and receiving $KDA.</p>
+Use the dApp’s interface to send and receive KDA tokens across any of Kadena’s 20 chains.</p>
 </li>
 <li>
-<p><strong>Transaction Signing</strong>:<br />
-Users can sign transactions initiated from integrated dApps, ensuring secure processing of on-chain activities.</p>
+<p><strong>Sign Transactions Securely</strong>:<br />
+When a dApp sends a transaction request, MetaMask will trigger a secure popup for approval.</p>
+</li>
+<li>
+<p><strong>Perform Cross-Chain Transfers</strong>:<br />
+The Snap abstracts the complexity of transferring KDA between Kadena’s braided chains.</p>
 </li>
 <li>
 <p><strong>Buy $KDA</strong>:<br />
-Users can purchase Kadena’s native token, $KDA, using the Simplex onramp service. This process is initiated from a dApp.</p>
+Integrated onramp support (e.g., Simplex) allows you to purchase KDA within the dApp.</p>
 </li>
 <li>
-<p><strong>Cross-Chain Transfers</strong>:<br />
-The Snap supports cross-chain transfers, enabling seamless movement of $KDA across Kadena’s 20 chains.</p>
+<p><strong>Use Gas Stations</strong>:<br />
+Fee abstraction via Kadena’s gas stations ensures transactions can be executed without the sender owning KDA initially.</p>
 </li>
 <li>
 <p><strong>Ledger Support</strong>:<br />
-The Snap supports <strong>storing Ledger accounts but not signing with them</strong>. dApps can implement their own Ledger signing logic to sign with these hardware accounts.</p>
+The Snap can store Ledger-based Kadena accounts (signing must be handled manually by the dApp).</p>
 </li>
 <li>
-<p><strong>Gas Station Usage</strong>:<br />
-Users can leverage gas stations, which help manage transaction fees.</p>
-</li>
-<li>
-<p><strong>Show $KDA Balance and Activity</strong>:<br />
-A dApp can display the $KDA balance and transaction history of accounts stored in a user’s Snap.</p>
-</li>
-<li>
-<p><strong>Web-Based Interface</strong>:<br />
-The Snap operates through a web-based interface, ensuring ease of access and use for interacting with Kadena-based services.</p>
+<p><strong>View Balances &amp; Activity</strong>:<br />
+The dApp can show balances and recent transactions using Snap-stored accounts.</p>
 </li>
 </ul>
-<h2 id="official-snap-release"><a class="header" href="#official-snap-release">Official Snap Release</a></h2>
+<h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
 <ul>
-<li><a href="https://snaps.metamask.io">Install from MetaMask Snap Directory</a></li>
-<li>Kadena’s Snap Npm Package: https://www.npmjs.com/package/@kadena/snap</li>
-<li>Kadena’s Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">veridise.com</a></li>
+<li>Kadena Snap NPM Package: https://www.npmjs.com/package/@kadena/snap</li>
+<li>Kadena Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">View PDF</a></li>
+<li>MetaMask Snap Docs: <a href="https://docs.metamask.io/guide/snaps.html">docs.metamask.io/guide/snaps.html</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kadena-snap-user-guide"><a class="header" href="#kadena-snap-user-guide">Kadena Snap User Guide</a></h1>
 <p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
+<h2 id="what-is-the-kadena-snap"><a class="header" href="#what-is-the-kadena-snap">What is the Kadena Snap?</a></h2>
+<p>The Kadena Snap is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:</p>
+<ul>
+<li>Manage Kadena accounts securely inside MetaMask</li>
+<li>Perform cross-chain transfers across Kadena's 20 chains</li>
+<li>Sign and send transactions using $KDA</li>
+<li>View account balances and activity</li>
+<li>Use gas stations to simplify fees</li>
+<li>Buy KDA through integrated fiat onramps</li>
+</ul>
+<p>The Snap is fully isolated, permissions-based, and built using MetaMask’s secure extensibility model.</p>
+<h2 id="who-is-this-guide-for"><a class="header" href="#who-is-this-guide-for">Who is this guide for?</a></h2>
+<p>This guide is intended for:</p>
+<ul>
+<li><strong>Users</strong> who want to manage $KDA from within MetaMask</li>
+<li><strong>Developers</strong> building dApps that integrate with the Kadena Snap</li>
+<li><strong>Testers</strong> exploring Snap capabilities on testnet</li>
+</ul>
+<p>No prior knowledge of Kadena or Snaps is required, though basic familiarity with MetaMask is helpful.</p>
+<h2 id="what-youll-need"><a class="header" href="#what-youll-need">What you'll need</a></h2>
+<p>Before getting started, make sure you have:</p>
+<ul>
+<li>✅ MetaMask installed in your browser</li>
+<li>✅ Access to a Snap-compatible dApp (or localhost test setup)</li>
+<li>✅ Some $KDA (use the faucet if testing)</li>
+<li>✅ Basic understanding of MetaMask permissions</li>
+</ul>
+<blockquote>
+<p>💡 You can install the Snap even without a dApp using the <a href="https://snaps.metamask.io">MetaMask Snap Directory</a>.</p>
+</blockquote>
+<h2 id="what-this-guide-covers"><a class="header" href="#what-this-guide-covers">What this guide covers</a></h2>
+<p>This guide includes:</p>
+<ul>
+<li>Connecting your MetaMask wallet</li>
+<li>Installing and approving the Kadena Snap</li>
+<li>Using the Snap to send transactions</li>
+<li>Switching to the testnet (optional)</li>
+<li>Funding accounts via faucet</li>
+<li>Using advanced Snap features like cross-chain transfers</li>
+</ul>
 <hr />
-<h2 id="1-connect-to-kadena-snap"><a class="header" href="#1-connect-to-kadena-snap">1. Connect to Kadena Snap</a></h2>
+<p>You’re now ready to explore the Kadena Snap and unlock full-chain functionality from right inside MetaMask.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="connect-to-kadena-snap"><a class="header" href="#connect-to-kadena-snap">Connect to Kadena Snap</a></h1>
 <p>When visiting a dApp that uses Kadena Snap, you’ll be prompted to connect your MetaMask wallet.</p>
-<p><img src="./images/connect-kadena-metamask.png" alt="Connect to Kadena MetaMask" /></p>
+<p><img src="user-guide/../images/connect-kadena-metamask.png" alt="Connect to Kadena MetaMask" /></p>
 <p>Your Kadena account will be derived from your <strong>MetaMask Secret Recovery Phrase</strong>.</p>
-<hr />
-<h2 id="2-approve-the-connection-request"><a class="header" href="#2-approve-the-connection-request">2. Approve the Connection Request</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="approve-the-connection-request"><a class="header" href="#approve-the-connection-request">Approve the Connection Request</a></h1>
 <p>MetaMask will display a connection request, asking you to approve the origin (e.g., <code>http://localhost:8080</code>).</p>
-<p><img src="./images/connection-request.png" alt="Connection Request" /></p>
+<p><img src="user-guide/../images/connection-request.png" alt="Connection Request" /></p>
 <p>Click <strong>"Conectar"</strong> (or "Connect") to proceed.</p>
-<hr />
-<h2 id="3-approve-permissions-to-add-snap"><a class="header" href="#3-approve-permissions-to-add-snap">3. Approve Permissions to Add Snap</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="approve-permissions-to-add-snap"><a class="header" href="#approve-permissions-to-add-snap">Approve Permissions to Add Snap</a></h1>
 <p>You’ll now be asked to install the Kadena Snap, which includes requesting permissions:</p>
 <ul>
 <li>Manage Kadena accounts</li>
 <li>Display dialog windows in MetaMask</li>
 <li>Display a custom screen</li>
 </ul>
-<p><img src="./images/add-to-metamask.png" alt="Add to MetaMask" /></p>
+<p><img src="user-guide/../images/add-to-metamask.png" alt="Add to MetaMask" /></p>
 <p>Click <strong>"Confirmar"</strong> to continue.</p>
-<hr />
-<h2 id="4-confirm-final-permissions"><a class="header" href="#4-confirm-final-permissions">4. Confirm Final Permissions</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="confirm-final-permissions"><a class="header" href="#confirm-final-permissions">Confirm Final Permissions</a></h1>
 <p>MetaMask may show a final prompt to <strong>"Proceed with caution"</strong>, requesting permission to manage your Kadena accounts.</p>
-<p><img src="./images/proceed-with-caution.png" alt="Proceed with Caution" /></p>
+<p><img src="user-guide/../images/proceed-with-caution.png" alt="Proceed with Caution" /></p>
 <p>Check the box to <strong>Install Kadena</strong> and click <strong>Confirmar</strong> to proceed.</p>
-<hr />
-<h2 id="5-snap-installed-successfully"><a class="header" href="#5-snap-installed-successfully">5. Snap Installed Successfully</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snap-installed-successfully"><a class="header" href="#snap-installed-successfully">Snap Installed Successfully</a></h1>
 <p>Once installed, MetaMask will display confirmation that the Kadena Snap is ready to use.</p>
-<p><img src="./images/installation-complete.png" alt="Installation Complete" /></p>
+<p><img src="user-guide/../images/installation-complete.png" alt="Installation Complete" /></p>
 <p>Click <strong>OK</strong> to return to the dApp.</p>
-<hr />
-<h2 id="6-switch-to-kadena-network-optional"><a class="header" href="#6-switch-to-kadena-network-optional">6. Switch to Kadena Network (Optional)</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="switchinng-networks-optional"><a class="header" href="#switchinng-networks-optional">Switchinng Networks (Optional)</a></h1>
 <p>If the dApp requires you to use the <strong>Kadena Testnet</strong>, you’ll be prompted to approve the network switch.</p>
-<p><img src="./images/switch-testnet.png" alt="Switching to Kadena Testnet" /></p>
+<p><img src="user-guide/../images/switch-testnet.png" alt="Switching to Kadena Testnet" /></p>
 <p>Click <strong>Aprovar</strong> (Approve) to allow switching to the testnet.</p>
-<hr />
-<h2 id="7-fund-your-account-using-faucet"><a class="header" href="#7-fund-your-account-using-faucet">7. Fund Your Account (Using Faucet)</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fund-your-account-using-faucet"><a class="header" href="#fund-your-account-using-faucet">Fund Your Account (Using Faucet)</a></h1>
 <p>To perform any transaction, your new account needs $KDA. Use the official faucet:</p>
 <p><strong>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Faucet</a></strong></p>
 <p>Once funded, you’ll see a screen like this while a transaction is being processed:</p>
-<p><img src="./images/transaction-processing.png" alt="Transaction Processing" /></p>
-<hr />
-<h2 id="8-sending-kda"><a class="header" href="#8-sending-kda">8. Sending KDA</a></h2>
+<p><img src="user-guide/../images/transaction-processing.png" alt="Transaction Processing" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sending-kda"><a class="header" href="#sending-kda">Sending KDA</a></h1>
 <p>After funding your account, you can send $KDA to other accounts or perform cross-chain transfers using the Snap interface.</p>
-<p><img src="./images/send-kda.png" alt="Send KDA" /></p>
+<p><img src="user-guide/../images/send-kda.png" alt="Send KDA" /></p>
 <ul>
 <li><strong>From Account</strong>: Your Kadena address</li>
 <li><strong>To account</strong>: Recipient address</li>
@@ -289,20 +328,41 @@ The Snap operates through a web-based interface, ensuring ease of access and use
 <li><strong>Gas Fee</strong>: Usually prefilled</li>
 </ul>
 <p>Click <strong>Send</strong> to broadcast your transaction.</p>
-<hr />
-<h2 id="done"><a class="header" href="#done">Done!</a></h2>
-<p>You're now ready to interact with Kadena natively from MetaMask via the Kadena Snap. 🚀</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sdk-quickstart"><a class="header" href="#sdk-quickstart">SDK Quickstart</a></h1>
-<h2 id="nextjs--kadena-snap-integration"><a class="header" href="#nextjs--kadena-snap-integration">Next.js + Kadena Snap Integration</a></h2>
-<p>This guide walks you through setting up a Kadena Snap-compatible dApp using the official SDK tools. We'll use the <a href="https://github.com/kadena-community/create-kadena-app"><code>create-kadena-app</code></a> CLI to scaffold a Next.js project and integrate the Kadena Snap via the wallet adapter.</p>
+<p>This guide walks you through setting up a Kadena Snap-compatible dApp using the official SDK tools. You'll use the <code>create-kadena-app</code> CLI to scaffold a Next.js project and connect it to the Kadena Snap via the wallet adapter.</p>
 <hr />
-<h3 id="1-generate-a-new-project"><a class="header" href="#1-generate-a-new-project">1. Generate a New Project</a></h3>
-<p>We leverage the template creation helper tool <code>create-kadena-app</code> to quickly scaffold a Next.js project:</p>
+<h2 id="what-is-this-sdk-for"><a class="header" href="#what-is-this-sdk-for">What is this SDK for?</a></h2>
+<p>The Kadena Snap SDK provides tools to simplify integration of Kadena’s Snap into modern frontend applications using frameworks like Next.js. It includes:</p>
+<ul>
+<li>CLI scaffolding tools (<code>create-kadena-app</code>)</li>
+<li>MetaMask Snap-compatible wallet adapters</li>
+<li>Example dApp templates with Snap support</li>
+</ul>
+<p>This setup allows developers to build secure, cross-chain Kadena applications that interact directly with MetaMask using the Snap extension.</p>
+<hr />
+<h2 id="who-is-this-guide-for-1"><a class="header" href="#who-is-this-guide-for-1">Who is this guide for?</a></h2>
+<p>This guide is for developers who want to:</p>
+<ul>
+<li>Scaffold a working Next.js dApp integrated with Kadena Snap</li>
+<li>Enable MetaMask Snap-based wallet connections</li>
+<li>Build on Kadena using TypeScript and modern tooling</li>
+</ul>
+<hr />
+<h2 id="what-youll-need-1"><a class="header" href="#what-youll-need-1">What you'll need</a></h2>
+<p>Before starting, make sure you have:</p>
+<ul>
+<li>✅ Node.js and a package manager (<code>npm</code>, <code>yarn</code>, or <code>pnpm</code>)</li>
+<li>✅ MetaMask installed in your browser</li>
+<li>✅ Kadena Snap installed (see <a href="sdk/../user-guide/index.html">User Guide</a>)</li>
+<li>✅ Basic familiarity with TypeScript and React</li>
+</ul>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generate-a-new-project"><a class="header" href="#generate-a-new-project">Generate a New Project</a></h1>
+<p>We leverage the <code>create-kadena-app</code> CLI tool to scaffold a Next.js project.</p>
 <pre><code class="language-bash">npx @kadena/create-kadena-app generate-project -t nextjs -n my-kadena-dapp
 cd my-kadena-dapp
 </code></pre>
-<hr />
-<h3 id="2-install-dependencies"><a class="header" href="#2-install-dependencies">2. Install Dependencies</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="install-dependencies"><a class="header" href="#install-dependencies">Install Dependencies</a></h1>
 <p>Use your preferred package manager to install dependencies:</p>
 <pre><code class="language-bash">pnpm install
 # or
@@ -310,8 +370,7 @@ npm install
 # or
 yarn install
 </code></pre>
-<hr />
-<h3 id="3-integrate-snap-wallet-adapter"><a class="header" href="#3-integrate-snap-wallet-adapter">3. Integrate Snap Wallet Adapter</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="integrate-snap-wallet-adapter"><a class="header" href="#integrate-snap-wallet-adapter">Integrate Snap Wallet Adapter</a></h1>
 <p>To enable Snap wallet support, edit the file <code>pages/_app.tsx</code>:</p>
 <pre><code class="language-ts">import { snapAdapter } from '@kadena/wallet-adapter-snap';
 import { AdapterFactory } from '@kadena/wallet-adapter-base';
@@ -320,8 +379,7 @@ const adapters: AdapterFactory[] = [
   snapAdapter(), // Add any other adapters here if needed
 ];
 </code></pre>
-<hr />
-<h3 id="4-run-the-development-server"><a class="header" href="#4-run-the-development-server">4. Run the Development Server</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="run-the-development-server"><a class="header" href="#run-the-development-server">Run the Development Server</a></h1>
 <p>Start your local development server:</p>
 <pre><code class="language-bash">pnpm dev
 # or
@@ -330,19 +388,16 @@ npm run dev
 yarn dev
 </code></pre>
 <p>Your app should now be running at <code>http://localhost:3000</code>, ready to connect to MetaMask and use the Kadena Snap.</p>
-<hr />
-<h3 id="5-optional-enable-testnet-faucet"><a class="header" href="#5-optional-enable-testnet-faucet">5. (Optional) Enable Testnet Faucet</a></h3>
-<p>To fund your account for development, visit:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="6-fund-with-faucet-optional"><a class="header" href="#6-fund-with-faucet-optional">6. Fund with Faucet (Optional)</a></h1>
+<p>To perform transactions, fund your test account with KDA using the official testnet faucet:</p>
 <p>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Testnet Faucet</a></p>
-<p>Enter your <code>k:</code> address from MetaMask and request free testnet KDA.</p>
-<hr />
-<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p>Paste your <code>k:</code> address and submit the request to receive free KDA.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
 <ul>
 <li>🔗 <a href="https://github.com/kadena-community/create-kadena-app">create-kadena-app GitHub</a></li>
 <li>🔗 <a href="https://github.com/kadena-community/kadena-snap">Kadena Snap Documentation</a></li>
 <li>🔗 <a href="https://www.npmjs.com/package/@kadena/wallet-adapter-snap">Wallet Adapter Snap Package</a></li>
 </ul>
-<hr />
 <p>You're now ready to build full-stack Kadena applications with native MetaMask Snap support.</p>
 
                     </main>

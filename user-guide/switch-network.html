@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview - Snaps Kadena</title>
+        <title>Switchinng Networks (Optional) - Snaps Kadena</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -102,7 +102,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -137,7 +137,7 @@
                     <h1 class="menu-title">Snaps Kadena</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -166,69 +166,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="kadenas-metamask-snap"><a class="header" href="#kadenas-metamask-snap">Kadena’s MetaMask Snap</a></h1>
-<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
-<p>Kadena’s Snap is an innovative integration that brings the unique capabilities of the Kadena blockchain ecosystem to the popular MetaMask wallet. By allowing users to interact with Kadena’s features directly through MetaMask, this Snap empowers users to manage their Kadena assets and participate in various blockchain activities with ease and efficiency, marking a significant step towards a more interconnected and user-friendly blockchain landscape.</p>
-<h2 id="what-is-a-snap"><a class="header" href="#what-is-a-snap">What is a Snap?</a></h2>
-<p>Kadena’s Snap leverages MetaMask’s security model to enable the ability to transfer and manage $KDA across Kadena’s 20 chains and sign transactions using your MetaMask wallet. The Snap is installed within the user’s MetaMask wallet and accessed via <a href="https://wallet.kadena.io">Kadena’s separate Snap interface</a>.</p>
-<p>When signing a transaction, a MetaMask popup is triggered, requiring user confirmation within the wallet. Cross-chain transfers (across Kadena’s 20 chains) are supported and can make use of Kadena’s gas stations if needed.</p>
-<p>Currently, Kadena’s Snap does not support NFTs or other Kadena tokens, but support may be added in future versions.</p>
-<p>To learn more about Snaps, visit the <a href="https://docs.metamask.io/guide/snaps.html">Metamask Snap Guide</a>.</p>
-<h2 id="what-are-some-of-the-kadena-snap-features"><a class="header" href="#what-are-some-of-the-kadena-snap-features">What are some of the Kadena Snap features?</a></h2>
-<ul>
-<li>
-<p><strong>Create Kadena Accounts</strong>:<br />
-Users can initiate account creation directly from a dApp by selecting [+ add account] and store it in the Snap.</p>
-</li>
-<li>
-<p><strong>Send and Receive $KDA</strong>:<br />
-The Snap enables users to perform regular transactions, allowing for both sending and receiving $KDA.</p>
-</li>
-<li>
-<p><strong>Transaction Signing</strong>:<br />
-Users can sign transactions initiated from integrated dApps, ensuring secure processing of on-chain activities.</p>
-</li>
-<li>
-<p><strong>Buy $KDA</strong>:<br />
-Users can purchase Kadena’s native token, $KDA, using the Simplex onramp service. This process is initiated from a dApp.</p>
-</li>
-<li>
-<p><strong>Cross-Chain Transfers</strong>:<br />
-The Snap supports cross-chain transfers, enabling seamless movement of $KDA across Kadena’s 20 chains.</p>
-</li>
-<li>
-<p><strong>Ledger Support</strong>:<br />
-The Snap supports <strong>storing Ledger accounts but not signing with them</strong>. dApps can implement their own Ledger signing logic to sign with these hardware accounts.</p>
-</li>
-<li>
-<p><strong>Gas Station Usage</strong>:<br />
-Users can leverage gas stations, which help manage transaction fees.</p>
-</li>
-<li>
-<p><strong>Show $KDA Balance and Activity</strong>:<br />
-A dApp can display the $KDA balance and transaction history of accounts stored in a user’s Snap.</p>
-</li>
-<li>
-<p><strong>Web-Based Interface</strong>:<br />
-The Snap operates through a web-based interface, ensuring ease of access and use for interacting with Kadena-based services.</p>
-</li>
-</ul>
-<h2 id="official-snap-release"><a class="header" href="#official-snap-release">Official Snap Release</a></h2>
-<ul>
-<li><a href="https://snaps.metamask.io">Install from MetaMask Snap Directory</a></li>
-<li>Kadena’s Snap Npm Package: https://www.npmjs.com/package/@kadena/snap</li>
-<li>Kadena’s Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">veridise.com</a></li>
-</ul>
+                        <h1 id="switchinng-networks-optional"><a class="header" href="#switchinng-networks-optional">Switchinng Networks (Optional)</a></h1>
+<p>If the dApp requires you to use the <strong>Kadena Testnet</strong>, you’ll be prompted to approve the network switch.</p>
+<p><img src="../images/switch-testnet.png" alt="Switching to Kadena Testnet" /></p>
+<p>Click <strong>Aprovar</strong> (Approve) to allow switching to the testnet.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../user-guide/success.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="user-guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../user-guide/faucet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -238,11 +189,11 @@ The Snap operates through a web-based interface, ensuring ease of access and use
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../user-guide/success.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="user-guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../user-guide/faucet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -257,13 +208,13 @@ The Snap operates through a web-based interface, ensuring ease of access and use
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
