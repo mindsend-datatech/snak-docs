@@ -233,12 +233,85 @@ The Snap can store Ledger-based Kadena accounts (signing must be handled manuall
 The dApp can show balances and recent transactions using Snap-stored accounts.</p>
 </li>
 </ul>
-<h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
+<blockquote>
+<p>Learn More</p>
 <ul>
 <li>Kadena Snap NPM Package: https://www.npmjs.com/package/@kadena/snap</li>
 <li>Kadena Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">View PDF</a></li>
 <li>MetaMask Snap Docs: <a href="https://docs.metamask.io/guide/snaps.html">docs.metamask.io/guide/snaps.html</a></li>
 </ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snap-architecture"><a class="header" href="#snap-architecture">Snap Architecture</a></h1>
+<p>What does snaK look like under the hood?</p>
+<p><img src="./images/snak-architecture.png" alt="snaK Architecture Diagram" /></p>
+<hr />
+<p>One of the primary benefits of developing and using a Snap like <strong>snaK</strong> in your application is that it inherits the <strong>security model of MetaMask</strong>. Each Snap runs in its <strong>own isolated execution environment</strong>, completely sandboxed from other Snaps and browser extensions.</p>
+<p>In the case of snaK, this isolation is crucial because the Snap manages <strong>private keys for Kadena accounts</strong> derived from the user's MetaMask seed phrase or imported independently. The Snap exposes a <strong>minimal set of RPC APIs</strong>, such as:</p>
+<ul>
+<li><code>create-account</code></li>
+<li><code>show-account</code></li>
+<li><code>transfer</code></li>
+</ul>
+<p>These functions allow secure interaction with the <strong>Chainweb network</strong> while keeping private key material inaccessible to the application.</p>
+<hr />
+<h2 id="secure-storage-and-execution"><a class="header" href="#secure-storage-and-execution">Secure Storage and Execution</a></h2>
+<p>Within snaK, key data such as:</p>
+<ul>
+<li><code>Private Key</code></li>
+<li><code>Public Key</code></li>
+<li><code>Account ID</code></li>
+<li><code>Chain ID</code></li>
+</ul>
+<p>are stored in internal Snap state. Only the Snap has access to this information. The <strong>RPC API handler</strong> gates all external access and enforces capability-based restrictions.</p>
+<p>The Snap is also responsible for managing the <strong>current account context</strong>, ensuring actions are executed against the correct wallet index and chain ID.</p>
+<hr />
+<h2 id="why-it-matters"><a class="header" href="#why-it-matters">Why it Matters</a></h2>
+<p>This architecture ensures that:</p>
+<ul>
+<li>No external dApp or Snap can access your private keys.</li>
+<li>All transactions must be explicitly signed via the Snap interface.</li>
+<li>The Snap can support multiple chain IDs in Kadena’s multi-chain architecture.</li>
+<li>Users retain full control over account selection and transaction authorization.</li>
+</ul>
+<p>By leveraging MetaMask's Snap framework, <strong>snaK</strong> ensures high-security interaction with the Kadena blockchain, giving developers and users a reliable tool for integrating Web3 functionality with native wallet capabilities.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frequently-asked-questions-faq"><a class="header" href="#frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a></h1>
+<h2 id="how-do-i-install-the-kadena-snap"><a class="header" href="#how-do-i-install-the-kadena-snap">How do I install the Kadena Snap?</a></h2>
+<p><strong>For developers integrating the Snap:</strong></p>
+<p>Ensure MetaMask is installed in your browser. The Kadena Snap can be installed via a supported dApp or manually through the MetaMask Snaps Directory.</p>
+<p>Note that Snaps have minimal UI. To unlock the full functionality, dApps must integrate directly with the Snap's RPC API. You can view our <a href="https://github.com/kadena-community/kadena-snap">demo app</a> for reference and SDK usage.</p>
+<p><strong>For users:</strong></p>
+<p>You can install the Snap through the MetaMask Snaps Directory. After installation, access it through:
+<strong>MetaMask → Settings → Snaps → Kadena Snap</strong></p>
+<hr />
+<h2 id="what-are-metamask-snaps"><a class="header" href="#what-are-metamask-snaps">What are MetaMask Snaps?</a></h2>
+<p>MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask, including support for new blockchains, transaction logic, and account models — all without requiring changes to MetaMask's core codebase.</p>
+<hr />
+<h2 id="what-is-a-snap-1"><a class="header" href="#what-is-a-snap-1">What is a Snap?</a></h2>
+<p>A Snap is an isolated JavaScript module that interacts with MetaMask through a restricted permissioned API. Snaps can add support for new protocols (like Kadena), handle signing flows, show custom notifications, or introduce new account models.</p>
+<hr />
+<h2 id="are-snaps-safe-to-use"><a class="header" href="#are-snaps-safe-to-use">Are Snaps safe to use?</a></h2>
+<p>Yes. Snaps are <strong>sandboxed</strong> and can only access what users explicitly approve. They cannot access your MetaMask private keys or seed phrase. Every Snap declares its required permissions during installation, and MetaMask handles consent.</p>
+<hr />
+<h2 id="can-i-interact-with-kadena-snap-directly-in-metamask"><a class="header" href="#can-i-interact-with-kadena-snap-directly-in-metamask">Can I interact with Kadena Snap directly in MetaMask?</a></h2>
+<p>Not directly. The Snap is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.</p>
+<p>We provide a <a href="https://github.com/kadena-community/kadena-snap">reference frontend</a> and SDK to help dApps integrate the Snap.</p>
+<hr />
+<h2 id="why-is-my-kadena-snap-address-different-from-my-metamask-address"><a class="header" href="#why-is-my-kadena-snap-address-different-from-my-metamask-address">Why is my Kadena Snap address different from my MetaMask address?</a></h2>
+<p>Kadena Snap generates a new Kadena key pair using <strong>entropy provided by MetaMask</strong>, not by accessing the seed phrase directly. This ensures your Snap account is <strong>securely tied to your MetaMask account</strong>, but operates independently from Ethereum addresses.</p>
+<p>This Snap-generated account is stored securely in isolated state and used for signing Kadena transactions.</p>
+<hr />
+<h2 id="can-i-import-an-existing-kadena-account"><a class="header" href="#can-i-import-an-existing-kadena-account">Can I import an existing Kadena account?</a></h2>
+<p><strong>Not yet.</strong> For now, Kadena Snap only supports <strong>generating new Kadena accounts</strong> using MetaMask-provided entropy. Importing external private keys is not currently supported, but may be added in a future release.</p>
+<hr />
+<h2 id="what-happens-if-i-uninstall-the-snap"><a class="header" href="#what-happens-if-i-uninstall-the-snap">What happens if I uninstall the Snap?</a></h2>
+<p>If you uninstall the Snap and later reinstall it while using the <strong>same MetaMask seed phrase</strong>, the same Kadena Snap account(s) will be restored automatically.</p>
+<p>Your account derivation is based on MetaMask entropy, so the Snap can recover accounts deterministically without storing them externally.</p>
+<hr />
+<h2 id="can-i-export-the-private-key-of-my-snap-account"><a class="header" href="#can-i-export-the-private-key-of-my-snap-account">Can I export the private key of my Snap account?</a></h2>
+<p><strong>Not yet.</strong> For security reasons, Kadena Snap does not currently support exporting private keys. This may be supported in the future with proper UI/UX and user confirmation flows via MetaMask.</p>
+<hr />
+<h2 id="is-kadena-snap-available-on-metamask-mobile"><a class="header" href="#is-kadena-snap-available-on-metamask-mobile">Is Kadena Snap available on MetaMask Mobile?</a></h2>
+<p>Not yet. MetaMask Mobile does not currently support Snaps. The Kadena Snap is available only in <strong>desktop browser extensions</strong> (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kadena-snap-user-guide"><a class="header" href="#kadena-snap-user-guide">Kadena Snap User Guide</a></h1>
 <p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
 <h2 id="what-is-the-kadena-snap"><a class="header" href="#what-is-the-kadena-snap">What is the Kadena Snap?</a></h2>

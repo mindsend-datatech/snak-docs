@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>User Guide - Snaps Kadena</title>
+        <title>FAQs - Snaps Kadena</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../";
+            const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -102,7 +102,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -137,7 +137,7 @@
                     <h1 class="menu-title">Snaps Kadena</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -166,60 +166,54 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="kadena-snap-user-guide"><a class="header" href="#kadena-snap-user-guide">Kadena Snap User Guide</a></h1>
-<p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
-<h2 id="what-is-the-kadena-snap"><a class="header" href="#what-is-the-kadena-snap">What is the Kadena Snap?</a></h2>
-<p>The Kadena Snap is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:</p>
-<ul>
-<li>Manage Kadena accounts securely inside MetaMask</li>
-<li>Perform cross-chain transfers across Kadena's 20 chains</li>
-<li>Sign and send transactions using $KDA</li>
-<li>View account balances and activity</li>
-<li>Use gas stations to simplify fees</li>
-<li>Buy KDA through integrated fiat onramps</li>
-</ul>
-<p>The Snap is fully isolated, permissions-based, and built using MetaMask’s secure extensibility model.</p>
-<h2 id="who-is-this-guide-for"><a class="header" href="#who-is-this-guide-for">Who is this guide for?</a></h2>
-<p>This guide is intended for:</p>
-<ul>
-<li><strong>Users</strong> who want to manage $KDA from within MetaMask</li>
-<li><strong>Developers</strong> building dApps that integrate with the Kadena Snap</li>
-<li><strong>Testers</strong> exploring Snap capabilities on testnet</li>
-</ul>
-<p>No prior knowledge of Kadena or Snaps is required, though basic familiarity with MetaMask is helpful.</p>
-<h2 id="what-youll-need"><a class="header" href="#what-youll-need">What you'll need</a></h2>
-<p>Before getting started, make sure you have:</p>
-<ul>
-<li>✅ MetaMask installed in your browser</li>
-<li>✅ Access to a Snap-compatible dApp (or localhost test setup)</li>
-<li>✅ Some $KDA (use the faucet if testing)</li>
-<li>✅ Basic understanding of MetaMask permissions</li>
-</ul>
-<blockquote>
-<p>💡 You can install the Snap even without a dApp using the <a href="https://snaps.metamask.io">MetaMask Snap Directory</a>.</p>
-</blockquote>
-<h2 id="what-this-guide-covers"><a class="header" href="#what-this-guide-covers">What this guide covers</a></h2>
-<p>This guide includes:</p>
-<ul>
-<li>Connecting your MetaMask wallet</li>
-<li>Installing and approving the Kadena Snap</li>
-<li>Using the Snap to send transactions</li>
-<li>Switching to the testnet (optional)</li>
-<li>Funding accounts via faucet</li>
-<li>Using advanced Snap features like cross-chain transfers</li>
-</ul>
+                        <h1 id="frequently-asked-questions-faq"><a class="header" href="#frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a></h1>
+<h2 id="how-do-i-install-the-kadena-snap"><a class="header" href="#how-do-i-install-the-kadena-snap">How do I install the Kadena Snap?</a></h2>
+<p><strong>For developers integrating the Snap:</strong></p>
+<p>Ensure MetaMask is installed in your browser. The Kadena Snap can be installed via a supported dApp or manually through the MetaMask Snaps Directory.</p>
+<p>Note that Snaps have minimal UI. To unlock the full functionality, dApps must integrate directly with the Snap's RPC API. You can view our <a href="https://github.com/kadena-community/kadena-snap">demo app</a> for reference and SDK usage.</p>
+<p><strong>For users:</strong></p>
+<p>You can install the Snap through the MetaMask Snaps Directory. After installation, access it through:
+<strong>MetaMask → Settings → Snaps → Kadena Snap</strong></p>
 <hr />
-<p>You’re now ready to explore the Kadena Snap and unlock full-chain functionality from right inside MetaMask.</p>
+<h2 id="what-are-metamask-snaps"><a class="header" href="#what-are-metamask-snaps">What are MetaMask Snaps?</a></h2>
+<p>MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask, including support for new blockchains, transaction logic, and account models — all without requiring changes to MetaMask's core codebase.</p>
+<hr />
+<h2 id="what-is-a-snap"><a class="header" href="#what-is-a-snap">What is a Snap?</a></h2>
+<p>A Snap is an isolated JavaScript module that interacts with MetaMask through a restricted permissioned API. Snaps can add support for new protocols (like Kadena), handle signing flows, show custom notifications, or introduce new account models.</p>
+<hr />
+<h2 id="are-snaps-safe-to-use"><a class="header" href="#are-snaps-safe-to-use">Are Snaps safe to use?</a></h2>
+<p>Yes. Snaps are <strong>sandboxed</strong> and can only access what users explicitly approve. They cannot access your MetaMask private keys or seed phrase. Every Snap declares its required permissions during installation, and MetaMask handles consent.</p>
+<hr />
+<h2 id="can-i-interact-with-kadena-snap-directly-in-metamask"><a class="header" href="#can-i-interact-with-kadena-snap-directly-in-metamask">Can I interact with Kadena Snap directly in MetaMask?</a></h2>
+<p>Not directly. The Snap is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.</p>
+<p>We provide a <a href="https://github.com/kadena-community/kadena-snap">reference frontend</a> and SDK to help dApps integrate the Snap.</p>
+<hr />
+<h2 id="why-is-my-kadena-snap-address-different-from-my-metamask-address"><a class="header" href="#why-is-my-kadena-snap-address-different-from-my-metamask-address">Why is my Kadena Snap address different from my MetaMask address?</a></h2>
+<p>Kadena Snap generates a new Kadena key pair using <strong>entropy provided by MetaMask</strong>, not by accessing the seed phrase directly. This ensures your Snap account is <strong>securely tied to your MetaMask account</strong>, but operates independently from Ethereum addresses.</p>
+<p>This Snap-generated account is stored securely in isolated state and used for signing Kadena transactions.</p>
+<hr />
+<h2 id="can-i-import-an-existing-kadena-account"><a class="header" href="#can-i-import-an-existing-kadena-account">Can I import an existing Kadena account?</a></h2>
+<p><strong>Not yet.</strong> For now, Kadena Snap only supports <strong>generating new Kadena accounts</strong> using MetaMask-provided entropy. Importing external private keys is not currently supported, but may be added in a future release.</p>
+<hr />
+<h2 id="what-happens-if-i-uninstall-the-snap"><a class="header" href="#what-happens-if-i-uninstall-the-snap">What happens if I uninstall the Snap?</a></h2>
+<p>If you uninstall the Snap and later reinstall it while using the <strong>same MetaMask seed phrase</strong>, the same Kadena Snap account(s) will be restored automatically.</p>
+<p>Your account derivation is based on MetaMask entropy, so the Snap can recover accounts deterministically without storing them externally.</p>
+<hr />
+<h2 id="can-i-export-the-private-key-of-my-snap-account"><a class="header" href="#can-i-export-the-private-key-of-my-snap-account">Can I export the private key of my Snap account?</a></h2>
+<p><strong>Not yet.</strong> For security reasons, Kadena Snap does not currently support exporting private keys. This may be supported in the future with proper UI/UX and user confirmation flows via MetaMask.</p>
+<hr />
+<h2 id="is-kadena-snap-available-on-metamask-mobile"><a class="header" href="#is-kadena-snap-available-on-metamask-mobile">Is Kadena Snap available on MetaMask Mobile?</a></h2>
+<p>Not yet. MetaMask Mobile does not currently support Snaps. The Kadena Snap is available only in <strong>desktop browser extensions</strong> (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../faqs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="architecture.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../user-guide/connect.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="user-guide/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -229,11 +223,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../faqs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="architecture.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../user-guide/connect.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="user-guide/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -248,13 +242,13 @@
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
