@@ -22,7 +22,7 @@ The book is built using [mdBook](https://rust-lang.github.io/mdBook) and covers:
 ### Prerequisites
 
 - [Rust](https://www.rust-lang.org/tools/install)
-- `mdbook` installed (check the ![official page](https://rust-lang.github.io/mdBook/guide/installation.html)
+- `mdbook` installed (check the ![official page](https://rust-lang.github.io/mdBook/guide/installation.html) for instructions)
 
 ### Running Locally
 
