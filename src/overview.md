@@ -46,8 +46,7 @@ Here’s what you can do with the Snap-enabled dApp:
 - **View Balances & Activity**:  
   The dApp can show balances and recent transactions using Snap-stored accounts.
 
-## Learn More
-
-- Kadena Snap NPM Package: https://www.npmjs.com/package/@kadena/snap  
-- Kadena Snap Audit Report: [View PDF](https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf)  
-- MetaMask Snap Docs: [docs.metamask.io/guide/snaps.html](https://docs.metamask.io/guide/snaps.html)
+> Learn More
+> - Kadena Snap NPM Package: https://www.npmjs.com/package/@kadena/snap  
+> - Kadena Snap Audit Report: [View PDF](https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf)  
+> - MetaMask Snap Docs: [docs.metamask.io/guide/snaps.html](https://docs.metamask.io/guide/snaps.html)

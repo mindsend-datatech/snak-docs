@@ -2,6 +2,8 @@
 
 - [Introduction](./intro.md)
 - [Overview](./overview.md)
+- [Architecture](./architecture.md)
+- [FAQs](./faqs.md)
 - [User Guide](user-guide/index.md)
   - [Connect to Kadena Snap](user-guide/connect.md)
   - [Approve the Connection Request](user-guide/approve-request.md)
