@@ -4,6 +4,7 @@ language = "en"
 src = "src"
 title = "Snaps Kadena"
 
+[preprocessor.chapter-list]
 
 [build]
 build-dir = "public"
