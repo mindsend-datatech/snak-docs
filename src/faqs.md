@@ -1,17 +1,17 @@
 # Frequently Asked Questions (FAQ)
 
-## How do I install the Kadena Snap?
-
-**For developers integrating the Snap:**
-
-Ensure MetaMask is installed in your browser. The Kadena Snap can be installed via a supported dApp or manually through the MetaMask Snaps Directory.
-
-Note that Snaps have minimal UI. To unlock the full functionality, dApps must integrate directly with the Snap's RPC API. You can view our [demo app](https://github.com/kadena-community/kadena-snap) for reference and SDK usage.
+## How do I install snaK?
 
 **For users:**
 
-You can install the Snap through the MetaMask Snaps Directory. After installation, access it through:
-**MetaMask → Settings → Snaps → Kadena Snap**
+You can install snaK through the MetaMask Snaps Directory. After installation, access it through:
+**MetaMask → Settings → Snaps → snaK**
+
+**For developers integrating snaK:**
+
+Ensure MetaMask is installed in your browser. snaK can be installed via a supported dApp or manually through the MetaMask Snaps Directory.
+
+Note that Snaps have minimal UI. To unlock the full functionality, dApps must integrate directly with the Snap's RPC API. You can view our [demo app](https://github.com/kadena-community/kadena-snap) for reference and SDK usage.
 
 ---
 
@@ -33,42 +33,42 @@ Yes. Snaps are **sandboxed** and can only access what users explicitly approve. 
 
 ---
 
-## Can I interact with Kadena Snap directly in MetaMask?
+## Can I interact with snaK directly in MetaMask?
 
-Not directly. The Snap is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.
+Not directly. snaK is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.
 
-We provide a [reference frontend](https://github.com/kadena-community/kadena-snap) and SDK to help dApps integrate the Snap.
+We provide a [reference frontend](https://github.com/kadena-community/kadena-snap) and SDK to help dApps integrate snaK.
 
 ---
 
-## Why is my Kadena Snap address different from my MetaMask address?
+## Why is my snaK address different from my MetaMask address?
 
-Kadena Snap generates a new Kadena key pair using **entropy provided by MetaMask**, not by accessing the seed phrase directly. This ensures your Snap account is **securely tied to your MetaMask account**, but operates independently from Ethereum addresses.
+snaK generates a new Kadena key pair using **entropy provided by MetaMask**, not by accessing the seed phrase directly. This ensures your snaK account is **securely tied to your MetaMask account**, but operates independently from Ethereum addresses.
 
-This Snap-generated account is stored securely in isolated state and used for signing Kadena transactions.
+This snaK-generated account is stored securely in isolated state and used for signing Kadena transactions.
 
 ---
 
 ## Can I import an existing Kadena account?
 
-**Not yet.** For now, Kadena Snap only supports **generating new Kadena accounts** using MetaMask-provided entropy. Importing external private keys is not currently supported, but may be added in a future release.
+**Not yet.** For now, snaK only supports **generating new Kadena accounts** using MetaMask-provided entropy. Importing external private keys is not currently supported, but may be added in a future release.
 
 ---
 
-## What happens if I uninstall the Snap?
+## What happens if I uninstall snaK?
 
-If you uninstall the Snap and later reinstall it while using the **same MetaMask seed phrase**, the same Kadena Snap account(s) will be restored automatically.
+If you uninstall snaK and later reinstall it while using the **same MetaMask seed phrase**, the same snaK account(s) will be restored automatically.
 
-Your account derivation is based on MetaMask entropy, so the Snap can recover accounts deterministically without storing them externally.
-
----
-
-## Can I export the private key of my Snap account?
-
-**Not yet.** For security reasons, Kadena Snap does not currently support exporting private keys. This may be supported in the future with proper UI/UX and user confirmation flows via MetaMask.
+Your account derivation is based on MetaMask entropy, so snaK can recover accounts deterministically without storing them externally.
 
 ---
 
-## Is Kadena Snap available on MetaMask Mobile?
+## Can I export the private key of my snaK account?
 
-Not yet. MetaMask Mobile does not currently support Snaps. The Kadena Snap is available only in **desktop browser extensions** (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.
+**Not yet.** For security reasons, snaK does not currently support exporting private keys. This may be supported in the future with proper UI/UX and user confirmation flows via MetaMask.
+
+---
+
+## Is snaK available on MetaMask Mobile?
+
+Not yet. MetaMask Mobile does not currently support Snaps. snaK is available only in **desktop browser extensions** (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.

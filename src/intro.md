@@ -2,7 +2,7 @@
 
 MetaMask is a popular Ethereum wallet and browser extension that developers can integrate into a variety of third-party applications. MetaMask Snaps is an open-source solution to enhance MetaMask’s functionalities beyond its native capabilities.
 
-The **Kadena Wallet Snap**, initially developed by the **Kadena Community** and now maintained by **Mindsend Datatech**, enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending KDA, performing cross-chain transfers, and retrieving account information.
+The **snaK Wallet**, initially developed by the **Kadena Community** and now maintained by **Mindsend Datatech**, enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending $KDA, performing cross-chain transfers, and retrieving account information.
 
 ## What is a Snap?
 

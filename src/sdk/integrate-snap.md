@@ -1,4 +1,4 @@
-# Integrate Snap Wallet Adapter
+# Integrate snaK Wallet Adapter
 
 To enable Snap wallet support, edit the file `pages/_app.tsx`:
 

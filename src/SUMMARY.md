@@ -5,7 +5,7 @@
 - [Architecture](./architecture.md)
 - [FAQs](./faqs.md)
 - [User Guide](user-guide/index.md)
-  - [Connect to Kadena Snap](user-guide/connect.md)
+  - [Connect to snaK](user-guide/connect.md)
   - [Approve the Connection Request](user-guide/approve-request.md)
   - [Approve Permissions to Add Snap](user-guide/approve-permissions.md)
   - [Confirm Final Permissions](user-guide/confirm-final.md)

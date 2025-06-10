@@ -2,7 +2,7 @@
 authors = ["Ariel Serranoni", "Francisco Miranda"]
 language = "en"
 src = "src"
-title = "Snaps Kadena"
+title = "snaK docs"
 
 [preprocessor.chapter-list]
 

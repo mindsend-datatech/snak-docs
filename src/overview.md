@@ -1,24 +1,24 @@
-# Getting Started with Kadena Snap
+# Getting Started with snaK
 
-The Kadena Snap is a MetaMask extension that brings Kadena-native capabilities—like account creation, transaction signing, and cross-chain transfers—directly into your MetaMask wallet.
+**snaK** is a MetaMask extension that brings Kadena-native capabilities—like account creation, transaction signing, and cross-chain transfers—directly into your MetaMask wallet.
 
-This guide walks you through installing the Snap and using it via dApps that support it.
+This guide walks you through installing the **snaK** Snap and using it via dApps that support it.
 
 ## Installation
 
-Before you can use the Kadena Snap, you must have MetaMask installed and configured in your browser.
+Before you can use **snaK**, you must have MetaMask installed and configured in your browser.
 
-1. Visit the official [MetaMask Snap Directory](https://snaps.metamask.io) and locate **Kadena Snap**.
+1. Visit the official [MetaMask Snap Directory](https://snaps.metamask.io) and locate **snaK**.
 2. Click **Install** to grant permissions and enable the Snap.
 3. The Snap will now be available inside your MetaMask under the “Snaps” section.
 
 > 💡 When installed, the Snap runs isolated from other extensions, using MetaMask’s permissioned execution model for enhanced security.
 
-## Using the Snap
+## Using snaK
 
-Once installed, the Kadena Snap can be accessed via supported decentralized applications (dApps). You don’t interact with it directly through MetaMask—it activates automatically when the connected site uses Snap methods.
+Once installed, **snaK** can be accessed via supported decentralized applications (dApps). You don’t interact with it directly through MetaMask—it activates automatically when the connected site uses Snap methods.
 
-> 🚧 A dedicated web interface for interacting with the Snap is under development and will be available at a future domain.
+The web interface for interacting with snaK is available at [snak.mindsend.xyz](https://snak.mindsend.xyz).
 
 Here’s what you can do with the Snap-enabled dApp:
 

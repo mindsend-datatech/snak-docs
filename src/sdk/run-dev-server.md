@@ -10,5 +10,5 @@ npm run dev
 yarn dev
 ````
 
-Your app should now be running at `http://localhost:3000`, ready to connect to MetaMask and use the Kadena Snap.
+Your app should now be running at `http://localhost:3000`, ready to connect to MetaMask and use snaK.
 
