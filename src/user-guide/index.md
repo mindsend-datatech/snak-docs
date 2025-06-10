@@ -50,3 +50,41 @@ This guide includes:
 ---
 
 You’re now ready to explore snaK and unlock full-chain functionality from right inside MetaMask.
+
+## Troubleshooting
+
+### Common Issues
+
+- **Accounts not appearing?**  
+  ✅ Ensure MetaMask is fully unlocked  
+  ✅ Check that snaK is properly installed  
+  ✅ Refresh the dApp page  
+
+- **Transactions failing?**  
+  🔹 Verify you have enough KDA for gas  
+  🔹 Confirm the correct chain is selected  
+  🔹 Check network status at [status.kadena.io](https://status.kadena.io)  
+
+- **Connection problems?**  
+  🔄 Try reconnecting your wallet  
+  🔄 Reinstall snaK if needed (accounts will recover)  
+
+## Security Guidelines
+
+⚠️ **Important Security Notes**  
+
+- Your KDA accounts are generated from your **MetaMask seed phrase**  
+- The same security practices for ETH apply to your KDA:  
+  - Never share your recovery phrase  
+  - Use a hardware wallet for maximum security  
+  - Be cautious of phishing sites  
+
+- Always verify:  
+  - Transaction details in MetaMask popups  
+  - Website URLs before connecting  
+  - Contract addresses when interacting with dApps  
+
+🔒 **Best Practices**  
+- Regularly review connected sites in MetaMask  
+- Keep your browser and MetaMask updated  
+- Consider using a dedicated wallet for snaK
