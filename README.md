@@ -1,10 +1,10 @@
-# Kadena Snap Documentation Book
+# snaK Documentation Book
 
-This repository contains the official documentation for the **Kadena Snap**, a MetaMask Snap integration that enables direct interaction with the Kadena blockchain from within MetaMask.
+This repository contains the official documentation for **snaK**, a MetaMask Snap integration that enables direct interaction with the Kadena blockchain from within MetaMask.
 
 The book is built using [mdBook](https://rust-lang.github.io/mdBook) and covers:
 
-- What the Kadena Snap is and how it works
+- What snaK is and how it works
 - Step-by-step user guide for MetaMask integration
 - SDK quickstart for building Snap-compatible dApps
 - Best practices for integration and testing
@@ -13,7 +13,7 @@ The book is built using [mdBook](https://rust-lang.github.io/mdBook) and covers:
 
 ## 📚 View the Book
 
-📖 [https://mindsend-datatech.github.io/snap-docs/](https://mindsend-datatech.github.io/snap-docs/)
+📖 [https://mindsend-datatech.github.io/snak-docs/](https://mindsend-datatech.github.io/snak-docs/)
 
 ---
 
@@ -38,7 +38,7 @@ This will build and host the book at `http://localhost:3000`.
 
 ```
 src/
-├── intro.md                # General intro to Kadena Snap
+├── intro.md                # General intro to snaK
 ├── user-guide/             # MetaMask + Snap onboarding flow
 ├── sdk/                    # Developer quickstart and integration guide
 └── SUMMARY.md              # Table of contents
