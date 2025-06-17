@@ -281,17 +281,15 @@ The dApp can show balances and recent transactions using Snap-stored accounts.</
 <p>Note that Snaps have minimal UI. To unlock the full functionality, dApps must integrate directly with the Snap's RPC API. You can view our <a href="https://github.com/kadena-community/kadena-snap">demo app</a> for reference and SDK usage.</p>
 <hr />
 <h2 id="what-are-metamask-snaps"><a class="header" href="#what-are-metamask-snaps">What are MetaMask Snaps?</a></h2>
-<p>MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask, including support for new blockchains, transaction logic, and account models — all without requiring changes to MetaMask's core codebase.</p>
-<hr />
-<h2 id="what-is-a-snap-1"><a class="header" href="#what-is-a-snap-1">What is a Snap?</a></h2>
-<p>A Snap is an isolated JavaScript module that interacts with MetaMask through a restricted permissioned API. Snaps can add support for new protocols (like Kadena), handle signing flows, show custom notifications, or introduce new account models.</p>
+<p>MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask. Snaps can add support for new protocols (like Kadena),
+handle signing flows, show custom notifications, or introduce new account models.</p>
 <hr />
 <h2 id="are-snaps-safe-to-use"><a class="header" href="#are-snaps-safe-to-use">Are Snaps safe to use?</a></h2>
 <p>Yes. Snaps are <strong>sandboxed</strong> and can only access what users explicitly approve. They cannot access your MetaMask private keys or seed phrase. Every Snap declares its required permissions during installation, and MetaMask handles consent.</p>
 <hr />
 <h2 id="can-i-interact-with-snak-directly-in-metamask"><a class="header" href="#can-i-interact-with-snak-directly-in-metamask">Can I interact with snaK directly in MetaMask?</a></h2>
 <p>Not directly. snaK is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.</p>
-<p>We provide a <a href="https://github.com/kadena-community/kadena-snap">reference frontend</a> and SDK to help dApps integrate snaK.</p>
+<p>We provide a <a href="https://snak.mindsend.xyz">reference frontend</a> for users to handle basic wallet operations and an SDK and wallet adapter to help dApps integrate snaK.</p>
 <hr />
 <h2 id="why-is-my-snak-address-different-from-my-metamask-address"><a class="header" href="#why-is-my-snak-address-different-from-my-metamask-address">Why is my snaK address different from my MetaMask address?</a></h2>
 <p>snaK generates a new Kadena key pair using <strong>entropy provided by MetaMask</strong>, not by accessing the seed phrase directly. This ensures your snaK account is <strong>securely tied to your MetaMask account</strong>, but operates independently from Ethereum addresses.</p>
@@ -445,6 +443,8 @@ The dApp can show balances and recent transactions using Snap-stored accounts.</
 <p>If the dApp requires you to use the <strong>Kadena Testnet</strong>, you’ll be prompted to approve the network switch.</p>
 <p><img src="user-guide/../images/switch-testnet.png" alt="Switching networks in snaK" /></p>
 <p>Click <strong>Aprovar</strong> (Approve) to allow switching to the testnet.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="signing-transactions"><a class="header" href="#signing-transactions">Signing Transactions</a></h1>
+<p><img src="user-guide/../images/sign-tx.png" alt="Sign Transaction via MetaMask" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fund-your-account-using-faucet"><a class="header" href="#fund-your-account-using-faucet">Fund Your Account (Using Faucet)</a></h1>
 <p>To perform any transaction, your new account needs $KDA. Use the official faucet:</p>
 <p><strong>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Faucet</a></strong></p>
