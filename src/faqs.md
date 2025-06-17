@@ -17,13 +17,8 @@ Note that Snaps have minimal UI. To unlock the full functionality, dApps must in
 
 ## What are MetaMask Snaps?
 
-MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask, including support for new blockchains, transaction logic, and account models — all without requiring changes to MetaMask's core codebase.
-
----
-
-## What is a Snap?
-
-A Snap is an isolated JavaScript module that interacts with MetaMask through a restricted permissioned API. Snaps can add support for new protocols (like Kadena), handle signing flows, show custom notifications, or introduce new account models.
+MetaMask Snaps are secure, sandboxed extensions that add new features to MetaMask. Snaps can add support for new protocols (like Kadena),
+handle signing flows, show custom notifications, or introduce new account models.
 
 ---
 
@@ -37,7 +32,7 @@ Yes. Snaps are **sandboxed** and can only access what users explicitly approve. 
 
 Not directly. snaK is designed to be accessed through a dApp using the exposed Snap RPC methods. These methods enable account creation, balance queries, and transaction signing.
 
-We provide a [reference frontend](https://github.com/kadena-community/kadena-snap) and SDK to help dApps integrate snaK.
+We provide a [reference frontend](https://snak.mindsend.xyz) for users to handle basic wallet operations and an SDK and wallet adapter to help dApps integrate snaK.
 
 ---
 
