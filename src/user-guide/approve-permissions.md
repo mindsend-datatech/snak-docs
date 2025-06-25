@@ -8,4 +8,4 @@ You’ll now be asked to install snaK, which includes requesting permissions:
 
 ![Add to MetaMask](../images/add-to-metamask.png)
 
-Click **"Confirmar"** to continue.
+Click **"Confirm"** to continue.

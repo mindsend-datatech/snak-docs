@@ -4,4 +4,4 @@ MetaMask will display a connection request, asking you to approve the origin (e.
 
 ![Connection Request](../images/connection-request.png)
 
-Click **"Conectar"** (or "Connect") to proceed.
+Click **"Connect"** to proceed.

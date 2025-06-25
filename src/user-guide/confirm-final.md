@@ -4,4 +4,4 @@ MetaMask may show a final prompt to **"Proceed with caution"**, requesting permi
 
 ![Proceed with Caution](../images/proceed-with-caution.png)
 
-Check the box to **Install snaK** and click **Confirmar** to proceed.
+Check the box to **Install snaK** and click **Confirm** to proceed.

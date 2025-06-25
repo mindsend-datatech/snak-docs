@@ -20,7 +20,7 @@ MetaMask will display a connection request, asking you to approve the origin (e.
 
 ![Connection Request](./images/connection-request.png)
 
-Click **"Conectar"** (or "Connect") to proceed.
+Click **"Connect"** to proceed.
 
 ---
 
@@ -34,7 +34,7 @@ You’ll now be asked to install the Kadena Snap, which includes requesting perm
 
 ![Add to MetaMask](./images/add-to-metamask.png)
 
-Click **"Confirmar"** to continue.
+Click **"Confirm"** to continue.
 
 ---
 
@@ -44,7 +44,7 @@ MetaMask may show a final prompt to **"Proceed with caution"**, requesting permi
 
 ![Proceed with Caution](./images/proceed-with-caution.png)
 
-Check the box to **Install Kadena** and click **Confirmar** to proceed.
+Check the box to **Install Kadena** and click **Confirm** to proceed.
 
 ---
 
@@ -64,7 +64,7 @@ If the dApp requires you to use the **Kadena Testnet**, you’ll be prompted to 
 
 ![Switching to Kadena Testnet](./images/switch-testnet.png)
 
-Click **Aprovar** (Approve) to allow switching to the testnet.
+Click **Approve** to allow switching to the testnet.
 
 ---
 
