@@ -2,8 +2,37 @@
 
 This guide walks you through how to connect and use your **Ledger** Hardware Wallet with snaK.
 
+
 > ✅ Tested with **Ledger Nano S**  
 > 🔒 Requires HID permission to be granted to your browser
+
+🛠️ snaK provides similar functionality to the official [Kadena Transfer tool](https://transfer.chainweb.com), but integrated directly into your wallet flow — no extra tabs or context switching required.
+
+---
+
+## Browser Compatibility
+
+> `navigator.hid` is required for Ledger support. Only available in **HTTPS secure contexts** and supported by Chromium-based **desktop browsers**.
+
+| Browser             | Support |
+|---------------------|---------|
+| **Desktop Browsers**|         |
+| Chrome              | ✅ 89+  |
+| Edge                | ✅ 89+  |
+| Firefox             | ❌ No   |
+| Opera               | ✅ 75+  |
+| Safari              | ❌ No   |
+| **Mobile Browsers** |         |
+| Chrome Android      | ❌ No   |
+| Firefox Android     | ❌ No   |
+| Opera Android       | ❌ No   |
+| Safari iOS          | ❌ No   |
+| Samsung Internet    | ❌ No   |
+| WebView Android     | ❌ No   |
+| **Other Platforms** |         |
+| Deno                | ❓ ?    |
+| Node.js             | ❌ No   |
+
 
 ---
 
@@ -53,6 +82,16 @@ If it's your first time connecting a Ledger:
 
 Your Ledger account is now added and ready to use! 🎉  
 You can now sign and send transactions from this account as described in other guides (e.g., [Send KDA](./send-kda.md)).
+
+---
+
+## Official Ledger Guide
+
+For a detailed step-by-step guide from Ledger (including how to use Kadena Transfer), check out:
+
+📄 [Ledger’s official Kadena guide](https://support.ledger.com/article/7415959614109-zd?redirect=false)
+
+This includes installation instructions and general advice for managing KDA safely.
 
 ---
 
