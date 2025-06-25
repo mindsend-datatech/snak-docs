@@ -23,7 +23,7 @@ jobs:
       - run: mdbook build
 
       - name: Create CNAME
-        run: echo "docs.mindsend.xyz" > ./public/CNAME
+        run: echo "docs.snak.mindsend.xyz" > ./public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
