@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Sending KDA - snaK docs</title>
+        <title>Adding Custom Networks - snaK docs</title>
 
 
         <!-- Custom HTML head -->
@@ -165,27 +165,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="sending-kda"><a class="header" href="#sending-kda">Sending KDA</a></h1>
-<p>After funding your account, you can send $KDA to other accounts or perform cross-chain transfers using the snaK interface.</p>
-<p><img src="../images/send-kda.png" alt="Send KDA" /></p>
-<ul>
-<li><strong>From Account</strong>: Your Kadena address</li>
-<li><strong>To account</strong>: Recipient address</li>
-<li><strong>To chain</strong>: Select destination chain (e.g., Chain 1–20)</li>
-<li><strong>Amount</strong>: Amount of $KDA</li>
-<li><strong>Gas Fee</strong>: Usually prefilled</li>
-</ul>
-<p>Click <strong>Send</strong> to broadcast your transaction.</p>
+                        <h1 id="add-a-custom-network-on-snak"><a class="header" href="#add-a-custom-network-on-snak">Add a Custom Network on snaK</a></h1>
+<blockquote>
+<p>⚠️ To add networks, <strong>Dev Mode</strong> must be enabled. Without it, the "Add Network" button is hidden.</p>
+</blockquote>
+<hr />
+<h2 id="1-enable-developer-mode"><a class="header" href="#1-enable-developer-mode">1. Enable Developer Mode</a></h2>
+<ol>
+<li>Open snaK.</li>
+<li>Toggle <strong>Dev Mode</strong> ON (top-right of the app).</li>
+</ol>
+<p><img src="../images/enable-dev-mode.png" alt="Dev Mode Toggle" /></p>
+<hr />
+<h2 id="2-add-custom-network"><a class="header" href="#2-add-custom-network">2. Add Custom Network</a></h2>
+<ol>
+<li>Open the network dropdown.</li>
+<li>Click <strong>Add Network</strong>.</li>
+<li>Fill in the fields:</li>
+</ol>
+<p><img src="../images/add-network-1.png" alt="Add Network" />
+<img src="../images/add-network-2.png" alt="Add Network" /></p>
+<div class="table-wrapper"><table><thead><tr><th>Field</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Name</strong></td><td>Mindsend Mainnet</td></tr>
+<tr><td><strong>Network ID</strong></td><td><code>mainnet01</code></td></tr>
+<tr><td><strong>Node URL</strong></td><td><code>https://chainweb.mindsend.xyz/chainweb/0.0</code></td></tr>
+<tr><td><strong>Explorer Transaction URL</strong></td><td><code>https://explorer.chainweb.com/mainnet/tx/[[txHash]]</code></td></tr>
+<tr><td><strong>Explorer Address URL</strong></td><td><code>https://explorer.chainweb.com/mainnet/account/[[address]]</code></td></tr>
+<tr><td><strong>Explorer Address Transactions</strong></td><td><code>https://explorer.chainweb.com/mainnet/transfer/[[address]]</code></td></tr>
+<tr><td><strong>Is Testnet?</strong></td><td>Enable if it's a testnet</td></tr>
+<tr><td><strong>Transaction List URL</strong></td><td><code>https://graph.kadena.network/graphql</code></td></tr>
+<tr><td><strong>Transaction List TTL</strong></td><td>30000</td></tr>
+<tr><td><strong>Buy Page URL</strong></td><td><em>(Optional)</em></td></tr>
+</tbody></table>
+</div>
+<ol start="3">
+<li>Click <strong>Send</strong>.</li>
+<li>Approve the request in the popup.</li>
+</ol>
+<p><img src="../images/approve-network.png" alt="Approve Network" /></p>
+<hr />
+<p>✅ Your network is now available in the dropdown.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../user-guide/faucet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../user-guide/ledger.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../user-guide/ledger.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../sdk/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -195,11 +224,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../user-guide/faucet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../user-guide/ledger.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../user-guide/ledger.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../sdk/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
