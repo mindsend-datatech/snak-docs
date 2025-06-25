@@ -48,11 +48,15 @@ This guide walks you through how to connect and use your **Ledger** Hardware Wal
 
 ## 2. Open Kadena App on Ledger
 
+![Ledger Live with Kadena installed](../images/ledger-kadena-app.png)
+
 After installation:
 
 - Unlock your Ledger.
 - Navigate to and **open the Kadena app** on the device.
 - You should see the message: `Kadena is ready`.
+
+![Ledger Live with Kadena installed](../images/ledger-kadena-ready.png)
 
 > 📌 If you haven't opened the app, snaK will prompt you to open it on your Ledger.
 
