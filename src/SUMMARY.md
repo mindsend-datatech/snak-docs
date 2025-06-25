@@ -14,6 +14,7 @@
   - [Signing Transactions](user-guide/sign-tx.md)
   - [Fund Your Account (Using Faucet)](user-guide/faucet.md)
   - [Sending KDA](user-guide/send-kda.md)
+  - [Use Ledger](user-guide/ledger.md)
   - [Adding Custom Networks](user-guide/add-network.md)
 - [SDK Quickstart](sdk/index.md)
   - [Generate a New Project](sdk/setup-project.md)
