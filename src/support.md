@@ -27,4 +27,4 @@ We prioritize issues based on:
 - Feature requests
 - General questions
 
-We aim to respond to all support requests within 2 business days.
+We respond to support requests as quickly as we can.
