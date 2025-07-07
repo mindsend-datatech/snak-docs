@@ -242,10 +242,37 @@ You can now sign and send transactions from this account as described in other g
 <p>📄 <a href="https://support.ledger.com/article/7415959614109-zd?redirect=false">Ledger’s official Kadena guide</a></p>
 <p>This includes installation instructions and general advice for managing KDA safely.</p>
 <hr />
-<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h2 id="ledger-specific-troubleshooting"><a class="header" href="#ledger-specific-troubleshooting">Ledger-Specific Troubleshooting</a></h2>
+<p><strong>Connection Issues</strong></p>
 <ul>
-<li><strong>Prompt to install MetaMask even when it's already installed?</strong><br />
-Check if you have other wallets (like <strong>Koala Wallet</strong>) interfering with <code>window.ethereum</code>.</li>
+<li>If your Ledger isn't detected:
+<ul>
+<li>Ensure the Kadena app is open on your device</li>
+<li>Try reconnecting the USB cable</li>
+<li>Restart your browser</li>
+<li>Check browser HID permissions (chrome://settings/content/hid)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transaction Errors</strong></p>
+<ul>
+<li>"Device disconnected" during signing:
+<ul>
+<li>Keep the Kadena app open throughout the process</li>
+<li>Avoid screen timeout on your Ledger</li>
+<li>Check for firmware updates in Ledger Live</li>
+</ul>
+</li>
+</ul>
+<p><strong>Browser Compatibility</strong></p>
+<ul>
+<li>If HID permissions aren't available:
+<ul>
+<li>Switch to Chrome/Edge/Opera (desktop versions only)</li>
+<li>Ensure you're on HTTPS</li>
+<li>Disable any wallet-extensions that might interfere</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>

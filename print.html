@@ -166,7 +166,21 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+                        <h1 id="welcome-to-snak"><a class="header" href="#welcome-to-snak">Welcome to snaK</a></h1>
+<p>snaK is your gateway to Kadena blockchain through MetaMask. This documentation will help you:</p>
+<ul>
+<li>Get started with snaK as a user</li>
+<li>Integrate snaK into your dApp as a developer</li>
+<li>Understand how snaK works under the hood</li>
+</ul>
+<h2 id="quick-links"><a class="header" href="#quick-links">Quick Links</a></h2>
+<ul>
+<li><a href="user-guide/index.html">User Guide</a> - For wallet users</li>
+<li><a href="sdk/index.html">SDK Quickstart</a> - For developers</li>
+<li><a href="./faqs.html">FAQs</a> - Common questions</li>
+</ul>
+<p>snaK brings Kadena's powerful multi-chain capabilities to MetaMask users, enabling seamless interaction with Kadena dApps while maintaining MetaMask's security and convenience.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>MetaMask is a popular Ethereum wallet and browser extension that developers can integrate into a variety of third-party applications. MetaMask Snaps is an open-source solution to enhance MetaMask’s functionalities beyond its native capabilities.</p>
 <p><strong>snaK</strong> enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending $KDA, performing cross-chain transfers, and retrieving account information. Initially developed by the Kadena Community, it's now maintained by Mindsend Datatech.</p>
 <h2 id="what-is-a-snap"><a class="header" href="#what-is-a-snap">What is a Snap?</a></h2>
@@ -233,7 +247,7 @@ The dApp can show balances and recent transactions using Snap-stored accounts.</
 <blockquote>
 <p>Learn More</p>
 <ul>
-<li>Kadena Snap NPM Package: https://www.npmjs.com/package/@kadena/snap</li>
+<li>Kadena Snap NPM Package: https://www.npmjs.com/package/@mindsend/kadena-snap</li>
 <li>Kadena Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">View PDF</a></li>
 <li>MetaMask Snap Docs: <a href="https://docs.metamask.io/guide/snaps.html">docs.metamask.io/guide/snaps.html</a></li>
 </ul>
@@ -307,6 +321,55 @@ handle signing flows, show custom notifications, or introduce new account models
 <hr />
 <h2 id="is-snak-available-on-metamask-mobile"><a class="header" href="#is-snak-available-on-metamask-mobile">Is snaK available on MetaMask Mobile?</a></h2>
 <p>Not yet. MetaMask Mobile does not currently support Snaps. snaK is available only in <strong>desktop browser extensions</strong> (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.</p>
+<hr />
+<h2 id="troubleshooting-common-issues"><a class="header" href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></h2>
+<p><strong>Prompt to install MetaMask even when it's already installed?</strong><br />
+Check if you have other wallets (like Koala Wallet) interfering with <code>window.ethereum</code>.</p>
+<p><strong>Ledger connection issues?</strong></p>
+<ul>
+<li>Ensure you're using a supported browser (Chrome/Edge/Opera)</li>
+<li>Make sure the Kadena app is open on your Ledger</li>
+<li>Try a different USB cable or port</li>
+<li>Check that HID permissions are granted in your browser</li>
+</ul>
+<h2 id="where-can-i-get-support"><a class="header" href="#where-can-i-get-support">Where can I get support?</a></h2>
+<p>For general support and questions, please use these channels:</p>
+<ul>
+<li><a href="https://support.mindsend.xyz/">Mindsend Support Portal</a></li>
+<li><a href="https://discord.gg/CZzZSKxzWP">Kadena Community Discord</a></li>
+</ul>
+<p>Our team monitors these channels and will respond to inquiries as quickly as possible.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="support"><a class="header" href="#support">Support</a></h1>
+<p>While we strive to make our documentation comprehensive, sometimes you may need additional help. Here are the official support channels:</p>
+<h2 id="official-support-channels"><a class="header" href="#official-support-channels">Official Support Channels</a></h2>
+<ol>
+<li>
+<p><strong>Support Portal</strong><br />
+For technical issues and bug reports:<br />
+<a href="https://support.mindsend.xyz/">https://support.mindsend.xyz/</a></p>
+</li>
+<li>
+<p><strong>Community Discord</strong><br />
+For general questions and community support:<br />
+<a href="https://discord.gg/CZzZSKxzWP">https://discord.gg/CZzZSKxzWP</a></p>
+</li>
+</ol>
+<h2 id="before-contacting-support"><a class="header" href="#before-contacting-support">Before Contacting Support</a></h2>
+<p>To help us serve you better, please:</p>
+<ul>
+<li>Check the <a href="./faqs.html">FAQs</a> first - your question may already be answered</li>
+<li>Have your MetaMask version and browser information ready</li>
+<li>For technical issues, include steps to reproduce the problem</li>
+</ul>
+<h2 id="issue-prioritization"><a class="header" href="#issue-prioritization">Issue Prioritization</a></h2>
+<p>We prioritize issues based on:</p>
+<ul>
+<li>Security vulnerabilities (highest priority)</li>
+<li>Functionality-breaking bugs</li>
+<li>Feature requests</li>
+<li>General questions</li>
+</ul>
+<p>We respond to support requests as quickly as we can.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="snak-user-guide"><a class="header" href="#snak-user-guide">snaK User Guide</a></h1>
 <p>This guide walks you through the steps to connect your MetaMask wallet to snaK, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
 <h2 id="what-is-snak"><a class="header" href="#what-is-snak">What is snaK?</a></h2>
@@ -521,10 +584,37 @@ You can now sign and send transactions from this account as described in other g
 <p>📄 <a href="https://support.ledger.com/article/7415959614109-zd?redirect=false">Ledger’s official Kadena guide</a></p>
 <p>This includes installation instructions and general advice for managing KDA safely.</p>
 <hr />
-<h2 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h2>
+<h2 id="ledger-specific-troubleshooting"><a class="header" href="#ledger-specific-troubleshooting">Ledger-Specific Troubleshooting</a></h2>
+<p><strong>Connection Issues</strong></p>
 <ul>
-<li><strong>Prompt to install MetaMask even when it's already installed?</strong><br />
-Check if you have other wallets (like <strong>Koala Wallet</strong>) interfering with <code>window.ethereum</code>.</li>
+<li>If your Ledger isn't detected:
+<ul>
+<li>Ensure the Kadena app is open on your device</li>
+<li>Try reconnecting the USB cable</li>
+<li>Restart your browser</li>
+<li>Check browser HID permissions (chrome://settings/content/hid)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transaction Errors</strong></p>
+<ul>
+<li>"Device disconnected" during signing:
+<ul>
+<li>Keep the Kadena app open throughout the process</li>
+<li>Avoid screen timeout on your Ledger</li>
+<li>Check for firmware updates in Ledger Live</li>
+</ul>
+</li>
+</ul>
+<p><strong>Browser Compatibility</strong></p>
+<ul>
+<li>If HID permissions aren't available:
+<ul>
+<li>Switch to Chrome/Edge/Opera (desktop versions only)</li>
+<li>Ensure you're on HTTPS</li>
+<li>Disable any wallet-extensions that might interfere</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
@@ -664,7 +754,7 @@ yarn dev
 <ul>
 <li>🔗 <a href="https://github.com/kadena-community/create-kadena-app">create-kadena-app GitHub</a></li>
 <li>🔗 <a href="https://github.com/kadena-community/kadena-snap">snaK Documentation</a></li>
-<li>🔗 <a href="https://www.npmjs.com/package/@kadena/wallet-adapter-snap">Wallet Adapter Snap Package</a></li>
+<li>🔗 <a href="https://www.npmjs.com/package/@mindsend/kadena-snap">Wallet Adapter Snap Package</a></li>
 </ul>
 <p>You're now ready to build full-stack Kadena applications with native snaK support.</p>
 
