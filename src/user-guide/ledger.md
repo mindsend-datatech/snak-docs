@@ -99,10 +99,26 @@ This includes installation instructions and general advice for managing KDA safe
 
 ---
 
-## Troubleshooting
+## Ledger-Specific Troubleshooting
 
-- **Prompt to install MetaMask even when it's already installed?**  
-  Check if you have other wallets (like **Koala Wallet**) interfering with `window.ethereum`.
+**Connection Issues**
+- If your Ledger isn't detected:
+  - Ensure the Kadena app is open on your device
+  - Try reconnecting the USB cable
+  - Restart your browser
+  - Check browser HID permissions (chrome://settings/content/hid)
+
+**Transaction Errors**
+- "Device disconnected" during signing:
+  - Keep the Kadena app open throughout the process
+  - Avoid screen timeout on your Ledger
+  - Check for firmware updates in Ledger Live
+
+**Browser Compatibility**
+- If HID permissions aren't available:
+  - Switch to Chrome/Edge/Opera (desktop versions only)
+  - Ensure you're on HTTPS
+  - Disable any wallet-extensions that might interfere
 
 ---
 

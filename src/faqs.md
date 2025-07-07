@@ -70,6 +70,17 @@ Not yet. MetaMask Mobile does not currently support Snaps. snaK is available onl
 
 ---
 
+## Troubleshooting Common Issues
+
+**Prompt to install MetaMask even when it's already installed?**  
+Check if you have other wallets (like Koala Wallet) interfering with `window.ethereum`.
+
+**Ledger connection issues?**  
+- Ensure you're using a supported browser (Chrome/Edge/Opera)
+- Make sure the Kadena app is open on your Ledger
+- Try a different USB cable or port
+- Check that HID permissions are granted in your browser
+
 ## Where can I get support?
 
 For general support and questions, please use these channels:
