@@ -67,3 +67,14 @@ Your account derivation is based on MetaMask entropy, so snaK can recover accoun
 ## Is snaK available on MetaMask Mobile?
 
 Not yet. MetaMask Mobile does not currently support Snaps. snaK is available only in **desktop browser extensions** (Chrome, Firefox, Brave). MetaMask has announced upcoming support for Snaps on mobile.
+
+---
+
+## Where can I get support?
+
+For general support and questions, please use these channels:
+
+- [Mindsend Support Portal](https://support.mindsend.xyz/)
+- [Kadena Community Discord](https://discord.gg/CZzZSKxzWP)
+
+Our team monitors these channels and will respond to inquiries as quickly as possible.
