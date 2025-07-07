@@ -5,6 +5,7 @@
 - [Overview](./overview.md)
 - [Architecture](./architecture.md)
 - [FAQs](./faqs.md)
+- [Support](./support.md)
 - [User Guide](user-guide/index.md)
   - [Connect to snaK](user-guide/connect.md)
     - [Approve the Connection Request](user-guide/approve-request.md)
