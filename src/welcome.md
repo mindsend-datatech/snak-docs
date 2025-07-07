@@ -1,6 +1,6 @@
 # Welcome to snaK
 
-![snaK Logo](./images/snak-architecture.png)
+![snaK Logo](./images/snak-logo.png)
 
 snaK is your gateway to Kadena blockchain through MetaMask. This documentation will help you:
 
