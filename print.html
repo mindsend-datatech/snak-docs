@@ -36,6 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc.js"></script>
@@ -92,10 +93,13 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -146,7 +150,12 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -686,77 +695,544 @@ You can now sign and send transactions from this account as described in other g
 <p><img src="user-guide/../images/approve-network.png" alt="Approve Network" /></p>
 <hr />
 <p>✅ Your network is now available in the dropdown.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="sdk-quickstart"><a class="header" href="#sdk-quickstart">SDK Quickstart</a></h1>
-<p>This guide walks you through setting up a snaK-compatible dApp using the official SDK tools. You'll use the <code>create-kadena-app</code> CLI to scaffold a Next.js project and connect it to snaK via the wallet adapter.</p>
-<hr />
-<h2 id="what-is-this-sdk-for"><a class="header" href="#what-is-this-sdk-for">What is this SDK for?</a></h2>
-<p>The snaK SDK provides tools to simplify integration of snaK into modern frontend applications using frameworks like Next.js. It includes:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dev-quickstart"><a class="header" href="#dev-quickstart">Dev Quickstart</a></h1>
+<h1 id="kadena-snap-rpc-calls-documentation"><a class="header" href="#kadena-snap-rpc-calls-documentation">Kadena Snap RPC Calls Documentation</a></h1>
+<p>This documentation covers the RPC methods provided by the Kadena Snap, allowing interaction with the Kadena blockchain via MetaMask. The Kadena Snap provides methods for checking connection status, managing accounts, interacting with networks, and signing transactions.</p>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<ol>
+<li><a href="dev-kickstart.html#available-rpc-methods">Available RPC Methods</a>
 <ul>
-<li>CLI scaffolding tools (<code>create-kadena-app</code>)</li>
-<li>MetaMask Snap-compatible wallet adapters</li>
-<li>Example dApp templates with Snap support</li>
+<li><a href="dev-kickstart.html#kda_checkconnection">kda_checkConnection</a></li>
+<li><a href="dev-kickstart.html#kda_addaccount">kda_addAccount</a></li>
+<li><a href="dev-kickstart.html#kda_addhardwareaccount">kda_addHardwareAccount</a></li>
+<li><a href="dev-kickstart.html#kda_deleteaccount">kda_deleteAccount</a></li>
+<li><a href="dev-kickstart.html#kda_deletehardwareaccount">kda_deleteHardwareAccount</a></li>
+<li><a href="dev-kickstart.html#kda_getaccounts">kda_getAccounts</a></li>
+<li><a href="dev-kickstart.html#kda_gethardwareaccounts">kda_getHardwareAccounts</a></li>
+<li><a href="dev-kickstart.html#kda_getnetworks">kda_getNetworks</a></li>
+<li><a href="dev-kickstart.html#kda_storenetwork">kda_storeNetwork</a></li>
+<li><a href="dev-kickstart.html#kda_deletenetwork">kda_deleteNetwork</a></li>
+<li><a href="dev-kickstart.html#kda_getactivenetwork">kda_getActiveNetwork</a></li>
+<li><a href="dev-kickstart.html#kda_setactivenetwork">kda_setActiveNetwork</a></li>
+<li><a href="dev-kickstart.html#kda_setaccountname">kda_setAccountName</a></li>
+<li><a href="dev-kickstart.html#kda_sethardwareaccountname">kda_setHardwareAccountName</a></li>
+<li><a href="dev-kickstart.html#kda_signtransaction">kda_signTransaction</a></li>
 </ul>
-<p>This setup allows developers to build secure, cross-chain Kadena applications that interact directly with MetaMask using the Snap extension.</p>
+</li>
+</ol>
 <hr />
-<h2 id="who-is-this-guide-for-1"><a class="header" href="#who-is-this-guide-for-1">Who is this guide for?</a></h2>
-<p>This guide is for developers who want to:</p>
-<ul>
-<li>Scaffold a working Next.js dApp integrated with snaK</li>
-<li>Enable MetaMask snaK wallet connections</li>
-<li>Build on Kadena using TypeScript and modern tooling</li>
-</ul>
-<hr />
-<h2 id="what-youll-need-1"><a class="header" href="#what-youll-need-1">What you'll need</a></h2>
-<p>Before starting, make sure you have:</p>
-<ul>
-<li>✅ Node.js and a package manager (<code>npm</code>, <code>yarn</code>, or <code>pnpm</code>)</li>
-<li>✅ MetaMask installed in your browser</li>
-<li>✅ snaK installed (see <a href="sdk/../user-guide/index.html">User Guide</a>)</li>
-<li>✅ Basic familiarity with TypeScript and React</li>
-</ul>
-<hr />
-<div style="break-before: page; page-break-before: always;"></div><h1 id="generate-a-new-project"><a class="header" href="#generate-a-new-project">Generate a New Project</a></h1>
-<p>We leverage the <code>create-kadena-app</code> CLI tool to scaffold a Next.js project.</p>
-<pre><code class="language-bash">npx @kadena/create-kadena-app generate-project -t nextjs -n my-kadena-dapp
-cd my-kadena-dapp
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="install-dependencies"><a class="header" href="#install-dependencies">Install Dependencies</a></h1>
-<p>Use your preferred package manager to install dependencies:</p>
-<pre><code class="language-bash">pnpm install
-# or
-npm install
-# or
-yarn install
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="integrate-snak-wallet-adapter"><a class="header" href="#integrate-snak-wallet-adapter">Integrate snaK Wallet Adapter</a></h1>
-<p>To enable Snap wallet support, edit the file <code>pages/_app.tsx</code>:</p>
-<pre><code class="language-ts">import { snapAdapter } from '@kadena/wallet-adapter-snap';
-import { AdapterFactory } from '@kadena/wallet-adapter-base';
+<h2 id="type-definitions"><a class="header" href="#type-definitions">Type Definitions</a></h2>
+<p>Below are the type definitions used in the Kadena Snap RPC calls. These types help ensure type safety and clarity when working with the RPC methods.</p>
+<pre><code class="language-typescript">type CheckConnectionResponse = boolean;
 
-const adapters: AdapterFactory[] = [
-  snapAdapter(), // Add any other adapters here if needed
-];
+type SnapAccount = {
+  id: string;
+  address: string;
+  publicKey: string;
+  index: number;
+  name: string;
+};
+
+type CreateAccountResponse = SnapAccount;
+
+type GetAccountsResponse = SnapAccount[];
+
+type DeleteAccountParams = {
+  id: string;
+};
+
+type DeleteHardwareAccountParams = {
+  id: string;
+};
+
+type SnapNetwork = {
+  name: string;
+  networkId: string;
+  blockExplorerTransaction: string;
+  blockExplorerAddress: string;
+  blockExplorerAddressTransactions: string;
+  isTestnet: boolean;
+  nodeUrl: string;
+  transactionListUrl: string;
+  transactionListTtl: number;
+  buyPageUrl: string;
+};
+
+type GetNetworksResponse = SnapNetwork[];
+
+type StoreNetworkParams = {
+  network: SnapNetwork;
+};
+
+type DeleteNetworkParams = {
+  networkId: string;
+};
+
+type GetActiveNetworkResponse = string;
+
+type SetActiveNetworkParams = {
+  networkId: string;
+};
+
+type SetAccountNameParams = {
+  id: string;
+  name: string;
+};
+
+type SetHardwareAccountNameParams = {
+  id: string;
+  name: string;
+};
+
+type SignTransactionParams = {
+  id: string;
+  transaction: string;
+};
+
+type SignTransactionResponse = string;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="run-the-development-server"><a class="header" href="#run-the-development-server">Run the Development Server</a></h1>
-<p>Start your local development server:</p>
-<pre><code class="language-bash">pnpm dev
-# or
-npm run dev
-# or
-yarn dev
+<hr />
+<h2 id="available-rpc-methods"><a class="header" href="#available-rpc-methods">Available RPC Methods</a></h2>
+<h3 id="kda_checkconnection"><a class="header" href="#kda_checkconnection">kda_checkConnection</a></h3>
+<p><strong>Description</strong>: Checks if the Kadena Snap is connected.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const isConnected = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_checkConnection' },
+  },
+});
 </code></pre>
-<p>Your app should now be running at <code>http://localhost:3000</code>, ready to connect to MetaMask and use snaK.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="6-fund-with-faucet-optional"><a class="header" href="#6-fund-with-faucet-optional">6. Fund with Faucet (Optional)</a></h1>
-<p>To perform transactions, fund your test account with KDA using the official testnet faucet:</p>
-<p>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Testnet Faucet</a></p>
-<p>Paste your <code>k:</code> address and submit the request to receive free KDA.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
-<ul>
-<li>🔗 <a href="https://github.com/kadena-community/create-kadena-app">create-kadena-app GitHub</a></li>
-<li>🔗 <a href="https://github.com/kadena-community/kadena-snap">snaK Documentation</a></li>
-<li>🔗 <a href="https://www.npmjs.com/package/@mindsend/kadena-snap">Wallet Adapter Snap Package</a></li>
-</ul>
-<p>You're now ready to build full-stack Kadena applications with native snaK support.</p>
+<p><strong>Response</strong>: <code>CheckConnectionResponse</code></p>
+<hr />
+<h3 id="kda_addaccount"><a class="header" href="#kda_addaccount">kda_addAccount</a></h3>
+<p><strong>Description</strong>: Derives a new account from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const account = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_addAccount' },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapAccount</code></p>
+<hr />
+<h3 id="kda_addhardwareaccount"><a class="header" href="#kda_addhardwareaccount">kda_addHardwareAccount</a></h3>
+<p><strong>Description</strong>: Adds a new hardware account from the Kadena Ledger App.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const account = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_addHardwareAccount',
+      params: {
+        index: 0,
+        address: '&lt;address&gt;',
+        publicKey: '&lt;publicKey&gt;',
+      },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapAccount</code></p>
+<hr />
+<h3 id="kda_deleteaccount"><a class="header" href="#kda_deleteaccount">kda_deleteAccount</a></h3>
+<p><strong>Description</strong>: Deletes an account by its ID on Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_deleteAccount',
+      params: { id: '&lt;id&gt;' },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_deletehardwareaccount"><a class="header" href="#kda_deletehardwareaccount">kda_deleteHardwareAccount</a></h3>
+<p><strong>Description</strong>: Deletes a hardware account by its ID on Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_deleteHardwareAccount',
+      params: { id: '&lt;id&gt;' },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_getaccounts"><a class="header" href="#kda_getaccounts">kda_getAccounts</a></h3>
+<p><strong>Description</strong>: Retrieves all accounts from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const accounts = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_getAccounts' },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapAccount[]</code></p>
+<hr />
+<h3 id="kda_gethardwareaccounts"><a class="header" href="#kda_gethardwareaccounts">kda_getHardwareAccounts</a></h3>
+<p><strong>Description</strong>: Retrieves all hardware accounts from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const hardwareAccounts = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_getHardwareAccounts' },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapAccount[]</code></p>
+<hr />
+<h3 id="kda_getnetworks"><a class="header" href="#kda_getnetworks">kda_getNetworks</a></h3>
+<p><strong>Description</strong>: Retrieves all networks from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const networks = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_getNetworks' },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapNetwork[]</code></p>
+<hr />
+<h3 id="kda_storenetwork"><a class="header" href="#kda_storenetwork">kda_storeNetwork</a></h3>
+<p><strong>Description</strong>: Adds a network to the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_storeNetwork',
+      params: {
+        network: {
+          name: 'New Network',
+          chainId: 1,
+          networkId: 'new-network-id',
+          nodeUrl: 'https://new-network-node.url',
+          blockExplorerTransaction: 'https://explorer.url/tx/{txId}',
+          blockExplorerAddress: 'https://explorer.url/address/{address}',
+          isTestnet: true,
+        },
+      },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SnapNetwork</code></p>
+<hr />
+<h3 id="kda_deletenetwork"><a class="header" href="#kda_deletenetwork">kda_deleteNetwork</a></h3>
+<p><strong>Description</strong>: Deletes a network from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_deleteNetwork',
+      params: { networkId: '&lt;networkId&gt;' },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_getactivenetwork"><a class="header" href="#kda_getactivenetwork">kda_getActiveNetwork</a></h3>
+<p><strong>Description</strong>: Retrieves the active network from the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const activeNetwork = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: { method: 'kda_getActiveNetwork' },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>GetActiveNetworkResponse</code></p>
+<hr />
+<h3 id="kda_setactivenetwork"><a class="header" href="#kda_setactivenetwork">kda_setActiveNetwork</a></h3>
+<p><strong>Description</strong>: Sets the active network in the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_setActiveNetwork',
+      params: { networkId: '&lt;networkId&gt;' },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_setaccountname"><a class="header" href="#kda_setaccountname">kda_setAccountName</a></h3>
+<p><strong>Description</strong>: Updates the name of an account in the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_setAccountName',
+      params: {
+        id: '&lt;id&gt;',
+        name: 'New Account Name',
+      },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_sethardwareaccountname"><a class="header" href="#kda_sethardwareaccountname">kda_setHardwareAccountName</a></h3>
+<p><strong>Description</strong>: Updates the name of a hardware account in the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_setHardwareAccountName',
+      params: {
+        id: '&lt;id&gt;',
+        name: 'New Hardware Account Name',
+      },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: None</p>
+<hr />
+<h3 id="kda_signtransaction"><a class="header" href="#kda_signtransaction">kda_signTransaction</a></h3>
+<p><strong>Description</strong>: Signs a transaction using the Kadena Snap.</p>
+<p><strong>Request Example</strong>:</p>
+<pre><code class="language-javascript">const signature = await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: defaultSnapOrigin,
+    request: {
+      method: 'kda_signTransaction',
+      params: {
+        id: '&lt;id&gt;',
+        transaction: '&lt;Transaction Payload&gt;',
+      },
+    },
+  },
+});
+</code></pre>
+<p><strong>Response</strong>: <code>SignTransactionResponse</code></p>
+<hr />
+<h2 id="example-usekadenasnap-hook"><a class="header" href="#example-usekadenasnap-hook">Example: <code>useKadenaSnap</code> Hook</a></h2>
+<p>To leverage these RPC methods in a React application, you can implement a custom hook, such as <code>useKadenaSnap</code>. This hook provides an interface for using the RPC methods within the React component lifecycle.</p>
+<pre><code class="language-typescript">import { useState } from 'react';
+import { SnapAccount, SnapNetwork } from '../types';
+import { defaultSnapOrigin } from '../config/snap';
+
+export default function useKadenaSnap() {
+  const [connected, setConnected] = useState&lt;boolean&gt;(false);
+
+  const checkConnection = async (): Promise&lt;boolean&gt; =&gt; {
+    try {
+      const isConnected = await window.ethereum.request&lt;boolean&gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: { method: 'kda_checkConnection' },
+        },
+      });
+      setConnected(isConnected !== undefined &amp;&amp; isConnected !== null);
+      return isConnected ?? false;
+    } catch (error) {
+      console.error('Error checking connection:', error);
+      return false;
+    }
+  };
+
+  const addAccount = async (): Promise&lt;SnapAccount&gt; =&gt; {
+    try {
+      const response = await window.ethereum.request&lt;SnapAccount&gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: { method: 'kda_addAccount' },
+        },
+      });
+
+      if (
+        !response ||
+        !response.address ||
+        !response.publicKey ||
+        typeof response.index !== 'number' ||
+        !response.name
+      ) {
+        throw new Error('Account creation failed: Missing essential data');
+      }
+
+      return response as SnapAccount;
+    } catch (error) {
+      console.error('Error creating account:', error);
+      throw error;
+    }
+  };
+
+  const getAccounts = async (): Promise&lt;SnapAccount[]&gt; =&gt; {
+    try {
+      const accounts = await window.ethereum.request&lt;
+        (SnapAccount | undefined)[]
+      &gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: { method: 'kda_getAccounts' },
+        },
+      });
+
+      if (!accounts) {
+        throw new Error('No accounts returned from Kadena snap');
+      }
+
+      return accounts.filter(
+        (account): account is SnapAccount =&gt; account !== undefined,
+      );
+    } catch (error) {
+      console.error('Error getting accounts:', error);
+      return [];
+    }
+  };
+
+  const getNetworks = async (): Promise&lt;SnapNetwork[]&gt; =&gt; {
+    try {
+      const networks = await window.ethereum.request&lt;
+        (SnapNetwork | undefined)[]
+      &gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: { method: 'kda_getNetworks' },
+        },
+      });
+
+      return (networks ?? []).filter(
+        (network): network is SnapNetwork =&gt; !!network,
+      );
+    } catch (error) {
+      console.error('Error getting networks:', error);
+      return [];
+    }
+  };
+
+  const addNetwork = async (
+    network: Partial&lt;SnapNetwork&gt;,
+  ): Promise&lt;Partial&lt;SnapNetwork&gt;&gt; =&gt; {
+    try {
+      const newNetwork = await window.ethereum.request&lt;SnapNetwork&gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: {
+            method: 'kda_storeNetwork',
+            params: {
+              network: {
+                name: network.name!,
+                chainId: network.chainId!,
+                networkId: network.networkId!,
+                nodeUrl: network.nodeUrl!,
+                blockExplorerTransaction: network.blockExplorerTransaction!,
+                blockExplorerAddress: network.blockExplorerAddress!,
+                blockExplorerAddressTransactions:
+                  network.blockExplorerAddressTransactions!,
+                isTestnet: network.isTestnet!,
+                transactionListUrl: network.transactionListUrl!,
+                transactionListTtl: network.transactionListTtl!,
+                buyPageUrl: network.buyPageUrl!,
+              },
+            },
+          },
+        },
+      });
+
+      if (!newNetwork) {
+        throw new Error('Failed to add network: No network returned');
+      }
+
+      return newNetwork;
+    } catch (error) {
+      console.error('Error adding network:', error);
+      throw error;
+    }
+  };
+
+  const deleteNetwork = async (networkId: string): Promise&lt;void&gt; =&gt; {
+    try {
+      await window.ethereum.request&lt;void&gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: {
+            method: 'kda_deleteNetwork',
+            params: { networkId },
+          },
+        },
+      });
+    } catch (error) {
+      console.error('Error deleting network:', error);
+      throw error;
+    }
+  };
+
+  const signMessage = async (
+    id: string,
+    transaction: string,
+  ): Promise&lt;string&gt; =&gt; {
+    try {
+      const signature = await window.ethereum.request&lt;string | undefined&gt;({
+        method: 'wallet_invokeSnap',
+        params: {
+          snapId: defaultSnapOrigin,
+          request: {
+            method: 'kda_signTransaction',
+            params: { id, transaction },
+          },
+        },
+      });
+      if (!signature) {
+        throw new Error('Signing failed');
+      }
+      return signature.toString().replace('0x', '');
+    } catch (error) {
+      console.error('Error signing transaction:', error);
+      throw error;
+    }
+  };
+
+  return {
+    connected,
+    checkConnection,
+    addAccount,
+    getAccounts,
+    getNetworks,
+    addNetwork,
+    deleteNetwork,
+    signMessage,
+  };
+}
+</code></pre>
 
                     </main>
 
@@ -798,6 +1274,7 @@ yarn dev
             window.setTimeout(window.print, 100);
         });
         </script>
+
 
     </div>
     </body>
