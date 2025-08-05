@@ -9,7 +9,7 @@ snaK is your gateway to Kadena blockchain through MetaMask. This documentation w
 ## Quick Links
 
 - [User Guide](user-guide/index.md) - For wallet users
-- [SDK Quickstart](sdk/index.md) - For developers
+- [SDK Quickstart](dev-kickstart.md) - For developers
 - [FAQs](./faqs.md) - Common questions
 
 snaK brings Kadena's powerful multi-chain capabilities to MetaMask users, enabling seamless interaction with Kadena dApps while maintaining MetaMask's security and convenience.
