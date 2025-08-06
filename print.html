@@ -380,9 +380,9 @@ For general questions and community support:<br />
 </ul>
 <p>We respond to support requests as quickly as we can.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="snak-user-guide"><a class="header" href="#snak-user-guide">snaK User Guide</a></h1>
-<p>This guide walks you through the steps to connect your MetaMask wallet to snaK, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
+<p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
 <h2 id="what-is-snak"><a class="header" href="#what-is-snak">What is snaK?</a></h2>
-<p>snaK is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:</p>
+<p>Kadena Snap is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:</p>
 <ul>
 <li>Manage Kadena accounts securely inside MetaMask</li>
 <li>Perform cross-chain transfers across Kadena's 20 chains</li>
@@ -391,13 +391,13 @@ For general questions and community support:<br />
 <li>Use gas stations to simplify fees</li>
 <li>Buy KDA through integrated fiat onramps</li>
 </ul>
-<p>snaK is fully isolated, permissions-based, and built using MetaMask’s secure extensibility model.</p>
+<p>The Kadena Snap is fully isolated, permissions-based, and built using MetaMask’s secure extensibility model.</p>
 <h2 id="who-is-this-guide-for"><a class="header" href="#who-is-this-guide-for">Who is this guide for?</a></h2>
 <p>This guide is intended for:</p>
 <ul>
 <li><strong>Users</strong> who want to manage $KDA from within MetaMask</li>
-<li><strong>Developers</strong> building dApps that integrate with snaK</li>
-<li><strong>Testers</strong> exploring snaK capabilities on testnet</li>
+<li><strong>Developers</strong> building dApps that integrate with the Kadena Snap</li>
+<li><strong>Testers</strong> exploring the Kadena Snap functionalities on testnet</li>
 </ul>
 <p>No prior knowledge of Kadena or Snaps is required, though basic familiarity with MetaMask is helpful.</p>
 <h2 id="what-youll-need"><a class="header" href="#what-youll-need">What you'll need</a></h2>
@@ -409,39 +409,40 @@ For general questions and community support:<br />
 <li>✅ Basic understanding of MetaMask permissions</li>
 </ul>
 <blockquote>
-<p>💡 You can install snaK even without a dApp using the <a href="https://snaps.metamask.io">MetaMask Snap Directory</a>.</p>
+<p>💡 You can install the Kadena Snap even without a dApp using the <a href="https://snaps.metamask.io">MetaMask Snap Directory</a>.</p>
 </blockquote>
 <h2 id="what-this-guide-covers"><a class="header" href="#what-this-guide-covers">What this guide covers</a></h2>
 <p>This guide includes:</p>
 <ul>
 <li>Connecting your MetaMask wallet</li>
-<li>Installing and approving snaK</li>
-<li>Using snaK to send transactions</li>
+<li>Installing and approving the Kadena Snap</li>
+<li>Using the Kadena Snap to send transactions</li>
 <li>Switching to the testnet (optional)</li>
 <li>Funding accounts via faucet</li>
 <li>Using advanced Snap features like cross-chain transfers</li>
 </ul>
 <hr />
-<p>You’re now ready to explore snaK and unlock full-chain functionality from right inside MetaMask.</p>
+<p>You’re now ready to explore the Kadena Snap and unlock full-chain functionality from right inside MetaMask.</p>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <h3 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h3>
 <ul>
 <li>
 <p><strong>Accounts not appearing?</strong><br />
 ✅ Ensure MetaMask is fully unlocked<br />
-✅ Check that snaK is properly installed<br />
+✅ Check that the Kadena Snap is properly installed<br />
 ✅ Refresh the dApp page</p>
 </li>
 <li>
 <p><strong>Transactions failing?</strong><br />
 🔹 Verify you have enough KDA for gas<br />
 🔹 Confirm the correct chain is selected<br />
+🔹 Verify you are connected to the correct network<br />
 🔹 Check network status at <a href="https://status.kadena.io">status.kadena.io</a></p>
 </li>
 <li>
 <p><strong>Connection problems?</strong><br />
 🔄 Try reconnecting your wallet<br />
-🔄 Reinstall snaK if needed (accounts will recover)</p>
+🔄 Reinstall the Kadena Snap if needed (accounts will recover)</p>
 </li>
 </ul>
 <h2 id="security-guidelines"><a class="header" href="#security-guidelines">Security Guidelines</a></h2>
@@ -471,7 +472,7 @@ For general questions and community support:<br />
 <ul>
 <li>Regularly review connected sites in MetaMask</li>
 <li>Keep your browser and MetaMask updated</li>
-<li>Consider using a dedicated wallet for snaK</li>
+<li>Consider using a dedicated browser and/or wallet for Kadena Snap</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="connect-to-snak"><a class="header" href="#connect-to-snak">Connect to snaK</a></h1>
 <p>When visiting a dApp that uses snaK, you’ll be prompted to connect your MetaMask wallet.</p>
@@ -491,11 +492,11 @@ For general questions and community support:<br />
 <li>Enable MetaMask's phishing detection</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="approve-the-snak-connection-request"><a class="header" href="#approve-the-snak-connection-request">Approve the snaK Connection Request</a></h1>
-<p>MetaMask will display a connection request, asking you to approve the origin (e.g., <code>http://localhost:8080</code>).</p>
+<p>MetaMask will display a connection request, asking you to approve the origin (e.g., <code>snak.mindsend.xyz wants to use @mindsend/kadena-snap</code>).</p>
 <p><img src="user-guide/../images/connection-request.png" alt="Connection Request" /></p>
 <p>Click <strong>"Connect"</strong> to proceed.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="approve-permissions-to-add-snak"><a class="header" href="#approve-permissions-to-add-snak">Approve Permissions to Add snaK</a></h1>
-<p>You’ll now be asked to install snaK, which includes requesting permissions:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="approve-permissions-to-add-kadena-snap"><a class="header" href="#approve-permissions-to-add-kadena-snap">Approve Permissions to Add Kadena Snap</a></h1>
+<p>You’ll now be asked to install Kadena Snap, which includes requesting permissions:</p>
 <ul>
 <li>Manage Kadena accounts</li>
 <li>Display dialog windows in MetaMask</li>
@@ -503,26 +504,26 @@ For general questions and community support:<br />
 </ul>
 <p><img src="user-guide/../images/add-to-metamask.png" alt="Add to MetaMask" /></p>
 <p>Click <strong>"Confirm"</strong> to continue.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="confirm-final-snak-permissions"><a class="header" href="#confirm-final-snak-permissions">Confirm Final snaK Permissions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="confirm-final-snap-permissions"><a class="header" href="#confirm-final-snap-permissions">Confirm Final Snap Permissions</a></h1>
 <p>MetaMask may show a final prompt to <strong>"Proceed with caution"</strong>, requesting permission to manage your Kadena accounts.</p>
 <p><img src="user-guide/../images/proceed-with-caution.png" alt="Proceed with Caution" /></p>
-<p>Check the box to <strong>Install snaK</strong> and click <strong>Confirm</strong> to proceed.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="snak-installed-successfully"><a class="header" href="#snak-installed-successfully">snaK Installed Successfully</a></h1>
-<p>Once installed, MetaMask will display confirmation that snaK is ready to use.</p>
+<p>Check the box to <strong>Install the Kadena Snap</strong> and click <strong>Confirm</strong> to proceed.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kadena-installed-successfully"><a class="header" href="#kadena-installed-successfully">Kadena Installed Successfully</a></h1>
+<p>Once installed, MetaMask will display confirmation that Kadena is ready to use.</p>
 <p><img src="user-guide/../images/installation-complete.png" alt="Installation Complete" /></p>
 <p>Click <strong>OK</strong> to return to the dApp.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="fund-your-account-using-faucet"><a class="header" href="#fund-your-account-using-faucet">Fund Your Account (Using Faucet)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fund-your-account-on-testnet-via-faucet"><a class="header" href="#fund-your-account-on-testnet-via-faucet">Fund Your Account on Testnet via Faucet</a></h1>
 <p>To perform any transaction, your new account needs $KDA. Use the official faucet:</p>
 <p><strong>🔗 <a href="https://tools.kadena.io/faucet/new">Kadena Faucet</a></strong></p>
 <p>Once funded, you’ll see a screen like this while a transaction is being processed:</p>
 <p><img src="user-guide/../images/transaction-processing.png" alt="Transaction Processing" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="using-ledger-with-snak"><a class="header" href="#using-ledger-with-snak">Using Ledger with snaK</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-ledger-with-the-kadena-snap"><a class="header" href="#using-ledger-with-the-kadena-snap">Using Ledger with the Kadena Snap</a></h1>
 <p>This guide walks you through how to connect and use your <strong>Ledger</strong> Hardware Wallet with snaK.</p>
 <blockquote>
 <p>✅ Tested with <strong>Ledger Nano S</strong><br />
 🔒 Requires HID permission to be granted to your browser</p>
 </blockquote>
-<p>🛠️ snaK provides similar functionality to the official <a href="https://transfer.chainweb.com">Kadena Transfer tool</a>, but integrated directly into your wallet flow — no extra tabs or context switching required.</p>
+<p>🛠️ The app provides similar functionality to the official <a href="https://transfer.chainweb.com">Kadena Transfer tool</a>, but integrated directly into your wallet flow — no extra tabs or context switching required.</p>
 <hr />
 <h2 id="browser-compatibility"><a class="header" href="#browser-compatibility">Browser Compatibility</a></h2>
 <blockquote>
@@ -639,11 +640,11 @@ You can now sign and send transactions from this account as described in other g
 </ul>
 <hr />
 <div style="break-before: page; page-break-before: always;"></div><h1 id="switching-networks-optional"><a class="header" href="#switching-networks-optional">Switching Networks (Optional)</a></h1>
-<p>If the dApp requires you to use the <strong>Kadena Testnet</strong>, you’ll be prompted to approve the network switch.</p>
+<p>To switch between Kadena Mainnet and Kadena Testnet, select the desired network from the dropdown on the snaK UI.</p>
 <p><img src="user-guide/../images/switch-testnet.png" alt="Switching networks in snaK" /></p>
-<p>Click <strong>Aprovar</strong> (Approve) to allow switching to the testnet.</p>
+<p>When switching between networks, you'll be prompted to approve the network switch.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sending-kda"><a class="header" href="#sending-kda">Sending KDA</a></h1>
-<p>After funding your account, you can send $KDA to other accounts or perform cross-chain transfers using the snaK interface.</p>
+<p>After funding your account, you can send $KDA to other accounts or perform native cross-chain transfers using the snaK interface.</p>
 <p><img src="user-guide/../images/send-kda.png" alt="Send KDA" /></p>
 <ul>
 <li><strong>From Account</strong>: Your Kadena address</li>
@@ -654,7 +655,14 @@ You can now sign and send transactions from this account as described in other g
 </ul>
 <p>Click <strong>Send</strong> to broadcast your transaction.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="signing-transactions"><a class="header" href="#signing-transactions">Signing Transactions</a></h1>
+<p>To complete a transaction, you must review and approve the signature request with the Kadena Snap in the MetaMask popup.</p>
 <p><img src="user-guide/../images/sign-tx.png" alt="Sign Transaction via MetaMask" /></p>
+<p>After you have reviewed the transaction signature request, select Approve.</p>
+<p>If the transaction is approved and successful, you will see this transaction in your Transaction Log.</p>
+<p><img src="user-guide/../images/tx-list.png" alt="Transaction List" /></p>
+<p>This displays both the -5 KDA that was sent and the gas fee paid. You can view the transaction on the block explorer by clicking directly on a transaction. A popup will also show on the snaK interface with more details about your transaction.</p>
+<p><img src="user-guide/../images/tx-sent.png" alt="Transaction Sent" /></p>
+<p>Select Close to return to the snaK UI</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="add-a-custom-network-on-snak"><a class="header" href="#add-a-custom-network-on-snak">Add a Custom Network on snaK</a></h1>
 <blockquote>
 <p>⚠️ To add networks, <strong>Dev Mode</strong> must be enabled. Without it, the "Add Network" button is hidden.</p>
@@ -695,6 +703,11 @@ You can now sign and send transactions from this account as described in other g
 <p><img src="user-guide/../images/approve-network.png" alt="Approve Network" /></p>
 <hr />
 <p>✅ Your network is now available in the dropdown.</p>
+<p><img src="user-guide/../images/custom-network-available.png" alt="Network Available" /></p>
+<p>You can now switch to it as in the <a href="user-guide/user-guide/switch-network.html">Switching Networks</a> section.</p>
+<p><img src="user-guide/../images/switch-custom-network.png" alt="Switch Custom Network" /></p>
+<p>and Voilá</p>
+<p><img src="user-guide/../images/custom-network-connected.png" alt="Custom Network Connected" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dev-quickstart"><a class="header" href="#dev-quickstart">Dev Quickstart</a></h1>
 <h1 id="kadena-snap-rpc-calls-documentation"><a class="header" href="#kadena-snap-rpc-calls-documentation">Kadena Snap RPC Calls Documentation</a></h1>
 <p>This documentation covers the RPC methods provided by the Kadena Snap, allowing interaction with the Kadena blockchain via MetaMask. The Kadena Snap provides methods for checking connection status, managing accounts, interacting with networks, and signing transactions.</p>
