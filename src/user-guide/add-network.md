@@ -44,3 +44,14 @@
 ---
 
 ✅ Your network is now available in the dropdown.
+
+
+![Network Available](../images/custom-network-available.png)
+
+You can now switch to it as in the [Switching Networks](user-guide/switch-network.md) section.
+
+![Switch Custom Network](../images/switch-custom-network.png)
+
+and Voilá
+
+![Custom Network Connected](../images/custom-network-connected.png)
