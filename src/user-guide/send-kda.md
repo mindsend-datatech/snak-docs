@@ -1,6 +1,6 @@
 # Sending KDA
 
-After funding your account, you can send $KDA to other accounts or perform cross-chain transfers using the snaK interface.
+After funding your account, you can send $KDA to other accounts or perform native cross-chain transfers using the snaK interface.
 
 ![Send KDA](../images/send-kda.png)
 

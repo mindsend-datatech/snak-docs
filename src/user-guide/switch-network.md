@@ -1,7 +1,9 @@
 # Switching Networks (Optional)
 
-If the dApp requires you to use the **Kadena Testnet**, you’ll be prompted to approve the network switch.
+
+
+To switch between Kadena Mainnet and Kadena Testnet, select the desired network from the dropdown on the snaK UI.
 
 ![Switching networks in snaK](../images/switch-testnet.png)
 
-Click **Aprovar** (Approve) to allow switching to the testnet.
+When switching between networks, you'll be prompted to approve the network switch.

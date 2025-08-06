@@ -61,10 +61,11 @@ You’re now ready to explore the Kadena Snap and unlock full-chain functionalit
   ✅ Refresh the dApp page  
 
 - **Transactions failing?**  
-  🔹 Verify you have enough KDA for gas  
-  🔹 Confirm the correct chain is selected
-  🔹 Verify you are connected to the correct network 
-  🔹 Check network status at [status.kadena.io](https://status.kadena.io)  
+🔹 Verify you have enough KDA for gas  
+🔹 Confirm the correct chain is selected  
+🔹 Verify you are connected to the correct network  
+🔹 Check network status at [status.kadena.io](https://status.kadena.io)
+
 
 - **Connection problems?**  
   🔄 Try reconnecting your wallet  

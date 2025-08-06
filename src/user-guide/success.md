@@ -1,6 +1,6 @@
-# snaK Installed Successfully
+# Kadena Installed Successfully
 
-Once installed, MetaMask will display confirmation that snaK is ready to use.
+Once installed, MetaMask will display confirmation that Kadena is ready to use.
 
 ![Installation Complete](../images/installation-complete.png)
 

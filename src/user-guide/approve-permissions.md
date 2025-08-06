@@ -1,6 +1,6 @@
-# Approve Permissions to Add snaK
+# Approve Permissions to Add Kadena Snap
 
-You’ll now be asked to install snaK, which includes requesting permissions:
+You’ll now be asked to install Kadena Snap, which includes requesting permissions:
 
 - Manage Kadena accounts
 - Display dialog windows in MetaMask

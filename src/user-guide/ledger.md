@@ -1,4 +1,4 @@
-# Using Ledger with snaK
+# Using Ledger with the Kadena Snap
 
 This guide walks you through how to connect and use your **Ledger** Hardware Wallet with snaK.
 
@@ -6,7 +6,7 @@ This guide walks you through how to connect and use your **Ledger** Hardware Wal
 > ✅ Tested with **Ledger Nano S**  
 > 🔒 Requires HID permission to be granted to your browser
 
-🛠️ snaK provides similar functionality to the official [Kadena Transfer tool](https://transfer.chainweb.com), but integrated directly into your wallet flow — no extra tabs or context switching required.
+🛠️ The app provides similar functionality to the official [Kadena Transfer tool](https://transfer.chainweb.com), but integrated directly into your wallet flow — no extra tabs or context switching required.
 
 ---
 

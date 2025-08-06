@@ -1,4 +1,4 @@
-# Fund Your Account (Using Faucet)
+# Fund Your Account on Testnet via Faucet
 
 To perform any transaction, your new account needs $KDA. Use the official faucet:
 
