@@ -6,7 +6,10 @@ This guide walks you through how to connect and use your **Ledger** Hardware Wal
 > ✅ Tested with **Ledger Nano S**  
 > 🔒 Requires HID permission to be granted to your browser
 
-🛠️ The app provides similar functionality to the official [Kadena Transfer tool](https://transfer.chainweb.com), but integrated directly into your wallet flow — no extra tabs or context switching required.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YsNGEmUbd7c?si=q8PEUuIUW3kdCPCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+> 🛠️ The app provides similar functionality to the official [Kadena Transfer tool](https://transfer.chainweb.com), but integrated directly into your wallet flow — no extra tabs or context switching required.
+
 
 ---
 

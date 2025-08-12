@@ -7,6 +7,7 @@
 - [FAQs](./faqs.md)
 - [Support](./support.md)
 - [User Guide](user-guide/index.md)
+  - [Video Tutorials](user-guide/video-tutorials.md)
   - [Connect to snaK](user-guide/connect.md)
     - [Approve the Connection Request](user-guide/approve-request.md)
     - [Approve Permissions to Add Snap](user-guide/approve-permissions.md)
