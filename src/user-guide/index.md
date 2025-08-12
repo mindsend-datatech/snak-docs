@@ -2,6 +2,9 @@
 
 This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.
 
+> 💻 **Note:** The Kadena Snap is only available in the MetaMask browser extension. Users must switch to desktop to interact with the Kadena Snap.
+
+
 ## What is snaK?
 
 Kadena Snap is a custom MetaMask Snap that allows users to interact directly with the Kadena blockchain. It enables you to:

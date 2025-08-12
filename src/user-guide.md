@@ -1,5 +1,7 @@
 # Kadena Snap User Guide
 
+> **Note:** The Kadena Snap is only available in the MetaMask browser extension. Users must switch to desktop to interact with the Kadena Snap.
+
 This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.
 
 ---
