@@ -2,7 +2,7 @@
 
 > **Note:** The Kadena Snap is only available in the MetaMask browser extension. Users must switch to desktop to interact with the Kadena Snap.
 
-This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.
+This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending tokens.
 
 ---
 
@@ -82,17 +82,18 @@ Once funded, you’ll see a screen like this while a transaction is being proces
 
 ---
 
-## 8. Sending KDA
+## 8. Sending Tokens
 
-After funding your account, you can send $KDA to other accounts or perform cross-chain transfers using the Snap interface.
+After funding your account, you can send tokens (KDA and other supported assets) to other accounts and, where supported, perform cross-chain transfers using the Snap interface.
 
-![Send KDA](./images/send-kda.png)
+![Send Tokens](./images/send-kda.png)
 
 - **From Account**: Your Kadena address
+- **Token**: Choose the asset to send (KDA by default)
 - **To account**: Recipient address
-- **To chain**: Select destination chain (e.g., Chain 1–20)
-- **Amount**: Amount of $KDA
-- **Gas Fee**: Usually prefilled
+- **To chain**: Select destination chain (e.g., Chain 1–20; only for tokens that support cross‑chain)
+- **Amount**: Token amount to send
+- **Gas Fee**: Usually prefilled (fees are paid in KDA)
 
 Click **Send** to broadcast your transaction.
 

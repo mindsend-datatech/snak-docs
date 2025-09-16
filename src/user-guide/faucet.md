@@ -11,7 +11,19 @@ To perform any transaction, your new account needs \$KDA tokens.
 
   * Centralized exchanges (CEX)
   * Decentralized exchanges (DEX)
-  * Payment providers such as Simplex
+  * Payment providers such as Transak and Simplex
+
+## Testnet Funding (Faucet)
+
+This section applies to the Kadena testnet only.
+
+1) Copy your Kadena address from your wallet (it looks like `k:...`).
+
+   ![Copy Your Address](../images/faucet-copy-address.png)
+
+2) On the testnet faucet, paste your:
+   - Account: `k:address`
+   - Public key: `address` (same as above, but without the `k:` prefix)
 
 Once funded, you’ll see a screen like this while a transaction is being processed:
 

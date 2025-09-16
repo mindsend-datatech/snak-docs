@@ -1,6 +1,6 @@
 # snaK User Guide
 
-This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.
+This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending tokens.
 
 > ðŸ’» **Note:** The Kadena Snap is only available in the MetaMask browser extension. Users must switch to desktop to interact with the Kadena Snap.
 
@@ -11,7 +11,7 @@ Kadena Snap is a custom MetaMask Snap that allows users to interact directly wit
 
 - Manage Kadena accounts securely inside MetaMask
 - Perform cross-chain transfers across Kadena's 20 chains
-- Sign and send transactions using $KDA
+- Sign and send transactions using KDA and other supported tokens
 - View account balances and activity
 - Use gas stations to simplify fees
 - Buy KDA through integrated fiat onramps
@@ -22,7 +22,7 @@ The Kadena Snap is fully isolated, permissions-based, and built using MetaMaskâ€
 
 This guide is intended for:
 
-- **Users** who want to manage $KDA from within MetaMask
+- **Users** who want to manage Kadena tokens (KDA and others) from within MetaMask
 - **Developers** building dApps that integrate with the Kadena Snap
 - **Testers** exploring the Kadena Snap functionalities on testnet
 

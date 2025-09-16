@@ -88,7 +88,7 @@ If it's your first time connecting a Ledger:
 ## 5. You're Done
 
 Your Ledger account is now added and ready to use! 🎉  
-You can now sign and send transactions from this account as described in other guides (e.g., [Send KDA](./send-kda.md)).
+You can now sign and send transactions from this account as described in other guides (e.g., [Send Tokens](./send-kda.md)).
 
 ---
 
@@ -134,4 +134,3 @@ This includes installation instructions and general advice for managing KDA safe
   [https://www.ledger.com/start](https://www.ledger.com/start)
 
 ---
-

@@ -25,14 +25,14 @@ Here’s what you can do with the Snap-enabled dApp:
 - **Create a Kadena Account**:  
   Click “+ Add Account” to generate a new Kadena account managed by the Snap.
 
-- **Send and Receive $KDA**:  
-  Use the dApp’s interface to send and receive KDA tokens across any of Kadena’s 20 chains.
+- **Send and Receive Tokens**:  
+  Use the dApp’s interface to send and receive Kadena tokens (including KDA) across supported chains.
 
 - **Sign Transactions Securely**:  
   When a dApp sends a transaction request, MetaMask will trigger a secure popup for approval.
 
 - **Perform Cross-Chain Transfers**:  
-  The Snap abstracts the complexity of transferring KDA between Kadena’s braided chains.
+  The Snap abstracts the complexity of transferring supported tokens (KDA included) between Kadena’s braided chains.
 
 - **Buy $KDA**:  
   Integrated onramp support (e.g., Simplex) allows you to purchase KDA within the dApp.
@@ -47,6 +47,6 @@ Here’s what you can do with the Snap-enabled dApp:
   The dApp can show balances and recent transactions using Snap-stored accounts.
 
 > Learn More
-> - Kadena Snap NPM Package: https://www.npmjs.com/package/@mindsend/kadena-snap  
+> - [Kadena Snap NPM Package](https://www.npmjs.com/package/@mindsend/kadena-snap)  
 > - Kadena Snap Audit Report: [View PDF](https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf)  
 > - MetaMask Snap Docs: [docs.metamask.io/guide/snaps.html](https://docs.metamask.io/guide/snaps.html)
