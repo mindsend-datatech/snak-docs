@@ -191,7 +191,7 @@
 <p>snaK brings Kadena's powerful multi-chain capabilities to MetaMask users, enabling seamless interaction with Kadena dApps while maintaining MetaMask's security and convenience.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>MetaMask is a popular Ethereum wallet and browser extension that developers can integrate into a variety of third-party applications. MetaMask Snaps is an open-source solution to enhance MetaMask’s functionalities beyond its native capabilities.</p>
-<p><strong>snaK</strong> enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending $KDA, performing cross-chain transfers, and retrieving account information. Initially developed by the Kadena Community, it's now maintained by Mindsend Datatech.</p>
+<p><strong>snaK</strong> enables users to interact directly with the Kadena blockchain without relying on traditional JSON-RPC endpoints, offering Kadena-native functionalities like sending tokens (KDA and others), performing cross-chain transfers, and retrieving account information. Initially developed by the Kadena Community, it's now maintained by Mindsend Datatech.</p>
 <h2 id="what-is-a-snap"><a class="header" href="#what-is-a-snap">What is a Snap?</a></h2>
 <p>MetaMask Snaps is an open-source framework allowing secure extensions to MetaMask, enhancing Web3 user experiences. It empowers the addition of new API methods, supports various blockchain protocols, and tweaks existing functionalities via the Snaps JSON-RPC API.</p>
 <p>Snaps enable users to interact with new blockchains, protocols, and decentralized applications (dApps) beyond what is natively supported by MetaMask. The goal of the MetaMask Snaps system is to create a more open, customizable, and extensible wallet experience for users while fostering innovation and collaboration within the blockchain and decentralized application ecosystem.</p>
@@ -225,8 +225,8 @@
 Click “+ Add Account” to generate a new Kadena account managed by the Snap.</p>
 </li>
 <li>
-<p><strong>Send and Receive $KDA</strong>:<br />
-Use the dApp’s interface to send and receive KDA tokens across any of Kadena’s 20 chains.</p>
+<p><strong>Send and Receive Tokens</strong>:<br />
+Use the dApp’s interface to send and receive Kadena tokens (including KDA) across supported chains.</p>
 </li>
 <li>
 <p><strong>Sign Transactions Securely</strong>:<br />
@@ -234,7 +234,7 @@ When a dApp sends a transaction request, MetaMask will trigger a secure popup fo
 </li>
 <li>
 <p><strong>Perform Cross-Chain Transfers</strong>:<br />
-The Snap abstracts the complexity of transferring KDA between Kadena’s braided chains.</p>
+The Snap abstracts the complexity of transferring supported tokens (KDA included) between Kadena’s braided chains.</p>
 </li>
 <li>
 <p><strong>Buy $KDA</strong>:<br />
@@ -256,7 +256,7 @@ The dApp can show balances and recent transactions using Snap-stored accounts.</
 <blockquote>
 <p>Learn More</p>
 <ul>
-<li>Kadena Snap NPM Package: https://www.npmjs.com/package/@mindsend/kadena-snap</li>
+<li><a href="https://www.npmjs.com/package/@mindsend/kadena-snap">Kadena Snap NPM Package</a></li>
 <li>Kadena Snap Audit Report: <a href="https://veridise.com/wp-content/uploads/2024/10/VAR_Kadena_240909_kadena_snap_V3.pdf">View PDF</a></li>
 <li>MetaMask Snap Docs: <a href="https://docs.metamask.io/guide/snaps.html">docs.metamask.io/guide/snaps.html</a></li>
 </ul>
@@ -380,7 +380,7 @@ For general questions and community support:<br />
 </ul>
 <p>We respond to support requests as quickly as we can.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="snak-user-guide"><a class="header" href="#snak-user-guide">snaK User Guide</a></h1>
-<p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending $KDA.</p>
+<p>This guide walks you through the steps to connect your MetaMask wallet to the Kadena Snap, install it, approve permissions, and perform basic operations like switching networks and sending tokens.</p>
 <blockquote>
 <p>💻 <strong>Note:</strong> The Kadena Snap is only available in the MetaMask browser extension. Users must switch to desktop to interact with the Kadena Snap.</p>
 </blockquote>
@@ -389,7 +389,7 @@ For general questions and community support:<br />
 <ul>
 <li>Manage Kadena accounts securely inside MetaMask</li>
 <li>Perform cross-chain transfers across Kadena's 20 chains</li>
-<li>Sign and send transactions using $KDA</li>
+<li>Sign and send transactions using KDA and other supported tokens</li>
 <li>View account balances and activity</li>
 <li>Use gas stations to simplify fees</li>
 <li>Buy KDA through integrated fiat onramps</li>
@@ -398,7 +398,7 @@ For general questions and community support:<br />
 <h2 id="who-is-this-guide-for"><a class="header" href="#who-is-this-guide-for">Who is this guide for?</a></h2>
 <p>This guide is intended for:</p>
 <ul>
-<li><strong>Users</strong> who want to manage $KDA from within MetaMask</li>
+<li><strong>Users</strong> who want to manage Kadena tokens (KDA and others) from within MetaMask</li>
 <li><strong>Developers</strong> building dApps that integrate with the Kadena Snap</li>
 <li><strong>Testers</strong> exploring the Kadena Snap functionalities on testnet</li>
 </ul>
@@ -543,10 +543,25 @@ For general questions and community support:<br />
 <ul>
 <li>Centralized exchanges (CEX)</li>
 <li>Decentralized exchanges (DEX)</li>
-<li>Payment providers such as Simplex</li>
+<li>Payment providers such as Transak and Simplex</li>
 </ul>
 </li>
 </ul>
+<h2 id="testnet-funding-faucet"><a class="header" href="#testnet-funding-faucet">Testnet Funding (Faucet)</a></h2>
+<p>This section applies to the Kadena testnet only.</p>
+<ol>
+<li>
+<p>Copy your Kadena address from your wallet (it looks like <code>k:...</code>).</p>
+<p><img src="user-guide/../images/faucet-copy-address.png" alt="Copy Your Address" /></p>
+</li>
+<li>
+<p>On the testnet faucet, paste your:</p>
+<ul>
+<li>Account: <code>k:address</code></li>
+<li>Public key: <code>address</code> (same as above, but without the <code>k:</code> prefix)</li>
+</ul>
+</li>
+</ol>
 <p>Once funded, you’ll see a screen like this while a transaction is being processed:</p>
 <p><img src="user-guide/../images/transaction-processing.png" alt="Transaction Processing" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="using-ledger-with-the-kadena-snap"><a class="header" href="#using-ledger-with-the-kadena-snap">Using Ledger with the Kadena Snap</a></h1>
@@ -622,7 +637,7 @@ For general questions and community support:<br />
 <hr />
 <h2 id="5-youre-done"><a class="header" href="#5-youre-done">5. You're Done</a></h2>
 <p>Your Ledger account is now added and ready to use! 🎉<br />
-You can now sign and send transactions from this account as described in other guides (e.g., <a href="user-guide/./send-kda.html">Send KDA</a>).</p>
+You can now sign and send transactions from this account as described in other guides (e.g., <a href="user-guide/./send-kda.html">Send Tokens</a>).</p>
 <hr />
 <h2 id="official-ledger-guide"><a class="header" href="#official-ledger-guide">Official Ledger Guide</a></h2>
 <p>For a detailed step-by-step guide from Ledger (including how to use Kadena Transfer), check out:</p>
@@ -678,17 +693,53 @@ You can now sign and send transactions from this account as described in other g
 <p>To switch between Kadena Mainnet and Kadena Testnet, select the desired network from the dropdown on the snaK UI.</p>
 <p><img src="user-guide/../images/switch-testnet.png" alt="Switching networks in snaK" /></p>
 <p>When switching between networks, you'll be prompted to approve the network switch.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="sending-kda"><a class="header" href="#sending-kda">Sending KDA</a></h1>
-<p>After funding your account, you can send $KDA to other accounts or perform native cross-chain transfers using the snaK interface.</p>
-<p><img src="user-guide/../images/send-kda.png" alt="Send KDA" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sending-tokens"><a class="header" href="#sending-tokens">Sending Tokens</a></h1>
+<p>After funding your account, you can send tokens (KDA and other supported Kadena tokens) to other accounts and, where supported, perform native cross-chain transfers using the snaK interface. If your token isn’t listed by default, first add it via <a href="user-guide/./add-token.html">Add Custom Tokens</a>.</p>
+<p><img src="user-guide/../images/send-kda.png" alt="Send Tokens" /></p>
 <ul>
 <li><strong>From Account</strong>: Your Kadena address</li>
+<li><strong>Token</strong>: Choose the asset to send (KDA by default)</li>
 <li><strong>To account</strong>: Recipient address</li>
-<li><strong>To chain</strong>: Select destination chain (e.g., Chain 1–20)</li>
-<li><strong>Amount</strong>: Amount of $KDA</li>
-<li><strong>Gas Fee</strong>: Usually prefilled</li>
+<li><strong>To chain</strong>: Select destination chain (e.g., Chain 1–20; only for tokens that support cross‑chain)</li>
+<li><strong>Amount</strong>: Token amount to send</li>
+<li><strong>Gas Fee</strong>: Usually prefilled (fees are paid in KDA)</li>
 </ul>
 <p>Click <strong>Send</strong> to broadcast your transaction.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-to-add-custom-tokens"><a class="header" href="#how-to-add-custom-tokens">How to Add Custom Tokens</a></h1>
+<p>This guide explains how to add custom tokens to your wallet interface.</p>
+<hr />
+<h2 id="step-1--open-the-token-manager"><a class="header" href="#step-1--open-the-token-manager">Step 1 — Open the Token Manager</a></h2>
+<p>Click on the three‑dot menu in the wallet and select Manage Tokens.</p>
+<p><img src="user-guide/../images/mng-tok.png" alt="Manage Tokens" /></p>
+<hr />
+<h2 id="step-2--view-the-token-list"><a class="header" href="#step-2--view-the-token-list">Step 2 — View the Token List</a></h2>
+<p>You will see the list of default tokens available in the wallet. At the bottom of this screen, click Add Custom Token.</p>
+<p><img src="user-guide/../images/all-tokens.png" alt="All Tokens" /></p>
+<hr />
+<h2 id="step-3--open-the-add-token-dialog"><a class="header" href="#step-3--open-the-add-token-dialog">Step 3 — Open the Add Token Dialog</a></h2>
+<p>A dialog will appear asking you to provide details about your token.</p>
+<p><img src="user-guide/../images/add-token-dialog.png" alt="Add Token Dialog" /></p>
+<hr />
+<h2 id="step-4--fill-in-token-information"><a class="header" href="#step-4--fill-in-token-information">Step 4 — Fill in Token Information</a></h2>
+<p>Enter the following information:</p>
+<ul>
+<li>Token Symbol (e.g., <code>MYTOKEN</code>)</li>
+<li>Contract Address (the token contract’s unique identifier)</li>
+<li>Token Name (readable name for the token)</li>
+<li>Decimals (the token’s precision, e.g., 12)</li>
+</ul>
+<p>After filling in the fields, click Add Token.</p>
+<p>Example (as shown below):</p>
+<ul>
+<li>Token Symbol: <code>toK</code></li>
+<li>Contract Address: <code>n_b80552a0994aabe4bdea79388c922c09d6a7bd35.tok</code></li>
+<li>Token Name: <code>toKen</code></li>
+<li>Decimals: <code>12</code></li>
+</ul>
+<p><img src="user-guide/../images/example-token-filled.png" alt="Example Token Filled" /></p>
+<hr />
+<h2 id="done"><a class="header" href="#done">Done!</a></h2>
+<p>Your custom token will now appear in the wallet’s token list and can be selected when sending tokens.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="signing-transactions"><a class="header" href="#signing-transactions">Signing Transactions</a></h1>
 <p>To complete a transaction, you must review and approve the signature request with the Kadena Snap in the MetaMask popup.</p>
 <p><img src="user-guide/../images/sign-tx.png" alt="Sign Transaction via MetaMask" /></p>
